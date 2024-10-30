@@ -5,7 +5,7 @@ from typing import Any, AsyncGenerator
 from sqlalchemy import select
 
 from db_models.models import (async_session, engine,
-                              Base, User, Product)
+                              Base, User, Product, Balance)
 from tools.tool import generate_code
 
 
@@ -65,11 +65,12 @@ async def add_user(user_id: int) -> str | None:
     async with get_session() as session:
         ref_code = await generate_code(length=8)
         user = User(tg_id=user_id, referal_code=ref_code)
+        balance = Balance(user_id=user_id, quantity=0.0)
         if (
             isinstance(user, User) and
             user.tg_id and user.referal_code
         ):
-            session.add(user)
+            session.add_all([user, balance])
             await session.commit()
             return ref_code
         else:
@@ -135,3 +136,25 @@ async def increasing_quantity_of_goods(name: str) -> str:
             logger.debug(
                 "Товраа нет в базе или название передано неверно")
             return False
+
+
+async def get_balance(user_id: int) -> float | str:
+    """
+    Получение баланса пользователя.
+
+    Args:
+
+        user_id: ID пользователя
+
+    Returnes:
+
+        Возвращает баланс пользователя
+    """
+    async with get_session() as session:
+        result = await select(Balance).where(Balance.user_id == user_id)
+        balance = session.execute(result).scalar_one_or_none()
+        if isinstance(balance, Balance):
+            return balance
+        else:
+            logger.debug("Ошибка получения баланса!")
+            return "Ошибка получения баланса!"

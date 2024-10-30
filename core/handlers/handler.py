@@ -8,7 +8,7 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 
 from core.database.dataTools import (get_user, add_user, add_product,
-                                     increasing_quantity_of_goods)
+                                     increasing_quantity_of_goods, get_balance)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
@@ -156,3 +156,14 @@ async def add_product_photo_db(message: Message, state: FSMContext) -> None:
     else:
         await message.answer(text=fsm_product[6])
         await state.clear()
+
+
+@router.message(F.text == user_menu[3])
+async def get_user_balance(message: Message) -> None:
+    """Получение баланса пользователя."""
+    user_id = message.from_user.id
+    balance = await get_balance(user_id=user_id)
+    if isinstance(balance, float):
+        await message.answer(f"Ваш баланс: {balance}")
+    else:
+        await message.answer(text=balance)
