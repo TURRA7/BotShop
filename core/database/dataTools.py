@@ -180,3 +180,7 @@ async def get_referal_code(user_id: int) -> str | int:
         else:
             logger.debug("Ошибка получения реферального кода!")
             return 0
+
+
+async def top_up_user(user_id: int, balance: float) -> str:
+    pass

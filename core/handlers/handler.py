@@ -195,6 +195,13 @@ async def get_contacts(message: Message) -> None:
     await message.answer(f"Администратор: {user_menu[8]}")
 
 
+@router.message(F.text == user_menu[9])
+async def get_my_id(message: Message) -> None:
+    """Получение своего ID."""
+    user_id = message.from_user.id
+    await message.answer(f"Ваш ID: {user_id}")
+
+
 @router.message(F.text == admin_menu[3], F.from_user.id == admin_id)
 async def make_gift(message: Message) -> None:
     """Генерация рандомного гифт-ключа."""
