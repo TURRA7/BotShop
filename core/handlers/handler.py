@@ -15,6 +15,7 @@ from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
 from core.keyboards.reply_inline import ReplyKeyBoards
 from state_models.state import Product_add
+from tools.tool import generate_gift
 
 
 logger = logging.getLogger(__name__)
@@ -192,3 +193,20 @@ async def get_referal(message: Message) -> None:
 async def get_contacts(message: Message) -> None:
     """Получение контактов, для связи с операторами и админами."""
     await message.answer(f"Администратор: {user_menu[8]}")
+
+
+@router.message(F.text == admin_menu[3], F.from_user.id == admin_id)
+async def make_gift(message: Message) -> None:
+    """Генерация рандомного гифт-ключа."""
+    gift = await generate_gift()
+    await message.answer(F"Вот гифт-ключ: {gift}")
+
+
+@router.message(F.text == admin_menu[4], F.from_user.id == admin_id)
+async def top_up(message: Message) -> None:
+    ...
+
+
+@router.message(F.text == admin_menu[5], F.from_user.id == admin_id)
+async def write_off(message: Message) -> None:
+    ...
