@@ -8,7 +8,8 @@ from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 
 from core.database.dataTools import (get_user, add_user, add_product,
-                                     increasing_quantity_of_goods, get_balance)
+                                     increasing_quantity_of_goods, get_balance,
+                                     get_referal_code)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
@@ -167,3 +168,18 @@ async def get_user_balance(message: Message) -> None:
         await message.answer(f"Ваш баланс: {balance}")
     else:
         await message.answer(text=balance)
+
+
+@router.message(F.text == user_menu[4])
+async def get_referal(message: Message) -> None:
+    """
+    Получение реферального кода, просмотр рефералов.
+
+    Notes:
+
+        Сейчас добавленно только получение реферального кода,
+        в будущем следует добавить ещё и список рефералов.
+    """
+    user_id = message.from_user.id
+    ref_code = await get_referal_code(user_id=user_id)
+    await message.answer(text=ref_code)

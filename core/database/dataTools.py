@@ -158,3 +158,25 @@ async def get_balance(user_id: int) -> float | str:
         else:
             logger.debug("Ошибка получения баланса!")
             return "Ошибка получения баланса!"
+
+
+async def get_referal_code(user_id: int) -> str:
+    """
+    Получение реферального кода.
+
+    Args:
+
+        user_id: ID пользователя
+
+    Returnes:
+
+        Возвращает реферальный код
+    """
+    async with get_session() as session:
+        result = await select(User).where(User.tg_id == user_id)
+        ref_code = session.execute(result).scalar_one_or_none()
+        if isinstance(ref_code, User):
+            return ref_code
+        else:
+            logger.debug("Ошибка получения реферального кода!")
+            return "Ошибка получения реферального кода!"
