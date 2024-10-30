@@ -160,7 +160,7 @@ async def get_balance(user_id: int) -> float | str:
             return "Ошибка получения баланса!"
 
 
-async def get_referal_code(user_id: int) -> str:
+async def get_referal_code(user_id: int) -> str | int:
     """
     Получение реферального кода.
 
@@ -179,4 +179,4 @@ async def get_referal_code(user_id: int) -> str:
             return ref_code
         else:
             logger.debug("Ошибка получения реферального кода!")
-            return "Ошибка получения реферального кода!"
+            return 0

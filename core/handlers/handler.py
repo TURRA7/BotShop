@@ -182,4 +182,13 @@ async def get_referal(message: Message) -> None:
     """
     user_id = message.from_user.id
     ref_code = await get_referal_code(user_id=user_id)
-    await message.answer(text=ref_code)
+    if ref_code != 0:
+        await message.answer(f"Ваш реферальный код: {ref_code}")
+    else:
+        await message.answer(text=ref_code)
+
+
+@router.message(F.text == user_menu[5])
+async def get_contacts(message: Message) -> None:
+    """Получение контактов, для связи с операторами и админами."""
+    await message.answer(f"Администратор: {user_menu[8]}")
