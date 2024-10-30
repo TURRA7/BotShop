@@ -19,12 +19,10 @@ Func:
     get_session: Генератор асинхронной сессии
 """
 import datetime
-from typing import Any, AsyncGenerator
 from sqlalchemy.orm import DeclarativeBase, relationship, sessionmaker
 from sqlalchemy import (DECIMAL, Boolean, Column, DateTime,
                         ForeignKey, Integer, String)
 from sqlalchemy.ext.asyncio import AsyncSession, create_async_engine
-from contextlib import asynccontextmanager
 
 from config import PG_USER, PG_PASS, PG_HOST, PG_NAME
 
@@ -38,12 +36,6 @@ async_session = sessionmaker(
     class_=AsyncSession,
     expire_on_commit=False
 )
-
-
-@asynccontextmanager
-async def get_session() -> AsyncGenerator[Any, Any, None]:
-    async with async_session() as session:
-        yield session
 
 
 class Base(DeclarativeBase):
