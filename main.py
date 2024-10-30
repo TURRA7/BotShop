@@ -12,7 +12,7 @@ from core.handlers.handler import router, start_bot, stop_bot
 logging.basicConfig(
     filename="BotShop.log",
     level=logging.DEBUG,
-    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+    format='%(asctime)s - %(name)s - %(funcName)s - %(levelname)s - %(message)s'
 )
 
 logger = logging.getLogger(__name__)

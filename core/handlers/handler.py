@@ -5,12 +5,15 @@ from aiogram import F
 from aiogram import Router, Bot
 from aiogram.types import Message
 from aiogram.filters import Command
+from aiogram.fsm.context import FSMContext
 
-from core.database.dataTools import get_user, add_user
+from core.database.dataTools import (get_user, add_user, add_product,
+                                     increasing_quantity_of_goods)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
-                                   admin_menu)
+                                   admin_menu, fsm_product)
 from core.keyboards.reply_inline import ReplyKeyBoards
+from state_models.state import Product_add
 
 
 logger = logging.getLogger(__name__)
@@ -69,3 +72,87 @@ async def admin_menu(message: Message) -> None:
                                                               admin_menu[5],
                                                               admin_menu[6]
                                                               ))
+
+
+@router.message(F.text == admin_menu[1], F.from_user.id == admin_id)
+async def add_product_start(message: Message, state: FSMContext) -> None:
+    """
+    Добавление продукта (FSM) в БД. Указание названия.
+
+    Notes:
+
+        Включает форму Product_add, просит указать название товара
+    """
+    await state.set_state(Product_add.name)
+    await message.answer(fsm_product[1])
+
+
+@router.message(Product_add.name, F.from_user.id == admin_id)
+async def add_product_name(message: Message, state: FSMContext) -> None:
+    """
+    Добавление продукта (FSM) в БД. Указание описания.
+
+    Notes:
+
+        Фиксирует название товара, переходин к следующему
+        состоянию, просит указать описание товара
+    """
+    await state.update_data(name=message.text)
+    await state.set_state(Product_add.description)
+    await message.answer(fsm_product[2])
+
+
+@router.message(Product_add.description, F.from_user.id == admin_id)
+async def add_product_desc(message: Message, state: FSMContext) -> None:
+    """
+    Добавление продукта (FSM) в БД. Указание цены.
+
+    Notes:
+
+        Фиксирует описание товара, переходин к следующему
+        состоянию, просит указать цену товара
+    """
+    await state.update_data(description=message.text)
+    await state.set_state(Product_add.price)
+    await message.answer(fsm_product[3])
+
+
+@router.message(Product_add.price, F.from_user.id == admin_id)
+async def add_product_price(message: Message, state: FSMContext) -> None:
+    """
+    Добавление продукта (FSM) в БД. Добавление фото.
+
+    Notes:
+
+        Фиксирует цену товара, переходин к следующему
+        состоянию, просит добавить фото
+    """
+    await state.update_data(price=message.text)
+    await state.set_state(Product_add.photo_id)
+    await message.answer(fsm_product[4])
+
+
+@router.message(Product_add.photo_id, F.from_user.id == admin_id)
+async def add_product_photo_db(message: Message, state: FSMContext) -> None:
+    """
+    Добавление продукта (FSM) в БД. Финальный шаг.
+
+    Notes:
+
+        Получает ID фото с системе, собирает данные из машины состояний,
+        добавляет товар в базу, увеличивает кол-во товара на 'складе'(в базе),
+        возвращает сообщение об успехе или ошибке добавления
+    """
+    file_id = message.photo[-1].file_id
+    data: dict = await state.get_data()
+    result = await add_product(name=data['name'],
+                               description=data['description'],
+                               price=data['price'],
+                               photo_id=file_id)
+    amount = await increasing_quantity_of_goods(name=data['name'])
+    if amount:
+        await message.answer(text=result)
+        await state.clear()
+    else:
+        await message.answer(text=fsm_product[6])
+        await state.clear()

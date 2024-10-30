@@ -88,7 +88,7 @@ class Product(Base):
     description = Column(String, nullable=True)
     price = Column(DECIMAL(10, 2), nullable=False)
     amount = Column(Integer, nullable=False, default=0)
-    is_stock = Column(Boolean, default=True)
+    is_stock = Column(Boolean, default=False)
     photo_id = Column(String, nullable=False)
 
 
