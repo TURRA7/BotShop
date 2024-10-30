@@ -1,7 +1,7 @@
 import random
 
 
-async def generate_gift(length: int = 8) -> str:
+async def generate_code(length: int = 8) -> str:
     """
     Генерирует строку(код из случайных букв и цифр).
 
