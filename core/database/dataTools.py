@@ -197,8 +197,31 @@ async def top_up_admin(user_id: int, amount: float) -> str:
         if isinstance(balance, Balance):
             balance.quantity += amount
             await session.commit()
-            return True
+            return "Баланс пополнен!"
         else:
             logger.debug(
                 "Пользователя нет в базе или был передан неверный ID")
-            return False
+            return "Пользователя нет в базе или был передан неверный ID"
+
+
+async def write_off_admin(user_id: int, amount: float) -> str:
+    """
+    Ручное списание средств с баланса пользователя.
+
+    Args:
+
+        user_id: ID пользователя
+        amount: Сумма на которую будет уменьшен баланс
+    """
+    async with get_session() as session:
+        result = await select(Balance).where(Balance.user_id == user_id)
+        balance = session.execute(result).scalar_one_or_none()
+        if isinstance(balance, Balance):
+            if balance >= amount:
+                balance.quantity -= amount
+                await session.commit()
+                return "Сумма списанна с баланса!"
+            else:
+                return "У пользователя нехвататет средств для списания!"
+        else:
+            return "Пользователя нет в базе или был передан неверный ID"

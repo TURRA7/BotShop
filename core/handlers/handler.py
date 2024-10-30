@@ -9,12 +9,13 @@ from aiogram.fsm.context import FSMContext
 
 from core.database.dataTools import (get_user, add_user, add_product,
                                      increasing_quantity_of_goods, get_balance,
-                                     get_referal_code, top_up_admin)
+                                     get_referal_code, top_up_admin,
+                                     write_off_admin)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
 from core.keyboards.reply_inline import ReplyKeyBoards
-from state_models.state import Product_add, TopUpAdmin
+from state_models.state import Product_add, TopUpAdmin, WriteOffAdmin
 from tools.tool import generate_gift
 
 
@@ -231,12 +232,29 @@ async def top_up_amount(message: Message, state: FSMContext) -> None:
     data: dict = await state.get_data()
     result = await top_up_admin(user_id=data['user_id'],
                                 amount=data['amount'])
-    if result:
-        await message.answer(text=fsm_product[9])
-    else:
-        await message.answer(text=fsm_product[10])
+    await message.answer(text=result)
 
 
 @router.message(F.text == admin_menu[5], F.from_user.id == admin_id)
-async def write_off(message: Message) -> None:
-    ...
+async def write_off_start(message: Message, state: FSMContext) -> None:
+    """Ручное списание средств (FSM). Указание ID пользователя."""
+    await state.set_state(WriteOffAdmin.user_id)
+    await message.answer(fsm_product[7])
+
+
+@router.message(WriteOffAdmin.user_id, F.from_user.id == admin_id)
+async def write_off_user_id(message: Message, state: FSMContext) -> None:
+    """Ручное списание средств (FSM). Указание суммы."""
+    await state.update_data(user_id=message.text)
+    await state.set_state(WriteOffAdmin.amount)
+    await message.answer(fsm_product[11])
+
+
+@router.message(WriteOffAdmin.amount, F.from_user.id == admin_id)
+async def write_off_amount(message: Message, state: FSMContext) -> None:
+    """Ручное списание средств (FSM). Списание средств."""
+    await state.update_data(amount=message.text)
+    data: dict = await state.get_data()
+    result = await write_off_admin(user_id=data['user_id'],
+                                   amount=data['amount'])
+    await message.answer(text=result)
