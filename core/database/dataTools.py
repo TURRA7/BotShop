@@ -182,5 +182,23 @@ async def get_referal_code(user_id: int) -> str | int:
             return 0
 
 
-async def top_up_user(user_id: int, balance: float) -> str:
-    pass
+async def top_up_admin(user_id: int, amount: float) -> str:
+    """
+    Ручное пополнение баланса пользователя.
+
+    Args:
+
+        user_id: ID пользователя
+        amount: Сумма на которую будет увеличен баланс
+    """
+    async with get_session() as session:
+        result = await select(Balance).where(Balance.user_id == user_id)
+        balance = session.execute(result).scalar_one_or_none()
+        if isinstance(balance, Balance):
+            balance.quantity += amount
+            await session.commit()
+            return True
+        else:
+            logger.debug(
+                "Пользователя нет в базе или был передан неверный ID")
+            return False

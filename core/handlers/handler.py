@@ -9,12 +9,12 @@ from aiogram.fsm.context import FSMContext
 
 from core.database.dataTools import (get_user, add_user, add_product,
                                      increasing_quantity_of_goods, get_balance,
-                                     get_referal_code)
+                                     get_referal_code, top_up_admin)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
 from core.keyboards.reply_inline import ReplyKeyBoards
-from state_models.state import Product_add
+from state_models.state import Product_add, TopUpAdmin
 from tools.tool import generate_gift
 
 
@@ -210,8 +210,31 @@ async def make_gift(message: Message) -> None:
 
 
 @router.message(F.text == admin_menu[4], F.from_user.id == admin_id)
-async def top_up(message: Message) -> None:
-    ...
+async def top_up_start(message: Message, state: FSMContext) -> None:
+    """Ручное пополнение баланса (FSM). Указание ID пользователя."""
+    await state.set_state(TopUpAdmin.user_id)
+    await message.answer(fsm_product[7])
+
+
+@router.message(TopUpAdmin.user_id, F.from_user.id == admin_id)
+async def top_up_user_id(message: Message, state: FSMContext) -> None:
+    """Ручное пополнение баланса (FSM). Указание суммы."""
+    await state.update_data(user_id=message.text)
+    await state.set_state(TopUpAdmin.amount)
+    await message.answer(fsm_product[8])
+
+
+@router.message(TopUpAdmin.amount, F.from_user.id == admin_id)
+async def top_up_amount(message: Message, state: FSMContext) -> None:
+    """Ручное пополнение баланса (FSM). Пополнение баланса."""
+    await state.update_data(amount=message.text)
+    data: dict = await state.get_data()
+    result = await top_up_admin(user_id=data['user_id'],
+                                amount=data['amount'])
+    if result:
+        await message.answer(text=fsm_product[9])
+    else:
+        await message.answer(text=fsm_product[10])
 
 
 @router.message(F.text == admin_menu[5], F.from_user.id == admin_id)
