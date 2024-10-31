@@ -7,6 +7,7 @@ from aiogram.fsm.storage.memory import MemoryStorage
 
 from config import TOKEN
 from core.handlers.handler import router, start_bot, stop_bot
+from core.database.dataTools import create_tables, delete_tables
 
 
 logging.basicConfig(
@@ -40,6 +41,7 @@ async def start() -> None:
     dp.shutdown.register(stop_bot)
 
     try:
+        await create_tables()
         await dp.start_polling(bot)
     except Exception as ex:
         logger.debug(f"Ошибка приложения {ex}")

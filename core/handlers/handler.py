@@ -15,8 +15,8 @@ from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
 from core.keyboards.reply_inline import ReplyKeyBoards
-from state_models.state import Product_add, TopUpAdmin, WriteOffAdmin
-from tools.tool import generate_gift
+from core.state_models.state import Product_add, TopUpAdmin, WriteOffAdmin
+from core.tools.tool import generate_gift
 
 
 logger = logging.getLogger(__name__)
@@ -65,7 +65,7 @@ async def get_start(message: Message) -> None:
 
 
 @router.message(F.text == admin_menu[7], F.from_user.id == admin_id)
-async def admin_menu(message: Message) -> None:
+async def moder_menu(message: Message) -> None:
     """Админ меню."""
     await message.answer(
             f"Привет <b>{message.from_user.first_name}</b>!",
@@ -73,7 +73,8 @@ async def admin_menu(message: Message) -> None:
                                                               admin_menu[3],
                                                               admin_menu[4],
                                                               admin_menu[5],
-                                                              admin_menu[6]
+                                                              admin_menu[6],
+                                                              admin_menu[8]
                                                               ))
 
 
@@ -167,9 +168,9 @@ async def get_user_balance(message: Message) -> None:
     user_id = message.from_user.id
     balance = await get_balance(user_id=user_id)
     if isinstance(balance, float):
-        await message.answer(f"Ваш баланс: {balance}")
+        await message.answer(f"Ваш баланс: {str(balance)} р.")
     else:
-        await message.answer(text=balance)
+        await message.answer(text=str(balance))
 
 
 @router.message(F.text == user_menu[4])

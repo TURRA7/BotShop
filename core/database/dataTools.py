@@ -4,9 +4,9 @@ from contextlib import asynccontextmanager
 from typing import Any, AsyncGenerator
 from sqlalchemy import select
 
-from db_models.models import (async_session, engine,
-                              Base, User, Product, Balance)
-from tools.tool import generate_code
+from core.db_models.models import (async_session, engine,
+                                   Base, User, Product, Balance)
+from core.tools.tool import generate_code
 
 
 logger = logging.getLogger(__name__)
@@ -25,7 +25,7 @@ async def delete_tables() -> None:
 
 
 @asynccontextmanager
-async def get_session() -> AsyncGenerator[Any, Any, None]:
+async def get_session() -> AsyncGenerator[Any, Any]:
     """Получение асинхронной сессии."""
     async with async_session() as session:
         yield session
@@ -39,15 +39,15 @@ async def get_user(user_id: int) -> User | None:
 
         user_id: ID в телеграмме
 
-    Returnes:
+    Returns:
 
         Если пользователь есть в базе, возвращает объект
         пользователя с его данными, иначе None
     """
     async with get_session() as session:
-        result = await select(User).where(User.tg_id == user_id)
-        user = session.execute(result).scalar_one_or_none()
-        return user
+        result = await session.execute(
+            select(User).where(User.tg_id == user_id))
+        return result.scalar_one_or_none()
 
 
 async def add_user(user_id: int) -> str | None:
@@ -126,8 +126,9 @@ async def increasing_quantity_of_goods(name: str) -> str:
         Увеличивает количество товара, возвращает строку с оповещением
     """
     async with get_session() as session:
-        result = await select(User).where(Product.product_name == name)
-        product = session.execute(result).scalar_one_or_none()
+        products = await session.execute(
+            select(Product).where(Product.product_name == name))
+        product = products.scalar_one_or_none()
         if isinstance(product, Product):
             product.amount += 1
             await session.commit()
@@ -151,10 +152,11 @@ async def get_balance(user_id: int) -> float | str:
         Возвращает баланс пользователя
     """
     async with get_session() as session:
-        result = await select(Balance).where(Balance.user_id == user_id)
-        balance = session.execute(result).scalar_one_or_none()
+        balances = await session.execute(
+            select(Balance).where(Balance.user_id == user_id))
+        balance = balances.scalar_one_or_none()
         if isinstance(balance, Balance):
-            return balance
+            return balance.quantity
         else:
             logger.debug("Ошибка получения баланса!")
             return "Ошибка получения баланса!"
@@ -173,10 +175,11 @@ async def get_referal_code(user_id: int) -> str | int:
         Возвращает реферальный код
     """
     async with get_session() as session:
-        result = await select(User).where(User.tg_id == user_id)
-        ref_code = session.execute(result).scalar_one_or_none()
-        if isinstance(ref_code, User):
-            return ref_code
+        ref_code = await session.execute(
+            select(User).where(User.tg_id == user_id))
+        code = ref_code.scalar_one_or_none()
+        if isinstance(code, User):
+            return code.referal_code
         else:
             logger.debug("Ошибка получения реферального кода!")
             return 0
@@ -192,8 +195,9 @@ async def top_up_admin(user_id: int, amount: float) -> str:
         amount: Сумма на которую будет увеличен баланс
     """
     async with get_session() as session:
-        result = await select(Balance).where(Balance.user_id == user_id)
-        balance = session.execute(result).scalar_one_or_none()
+        balances = await session.execute(
+            select(Balance).where(Balance.user_id == user_id))
+        balance = balances.scalar_one_or_none()
         if isinstance(balance, Balance):
             balance.quantity += amount
             await session.commit()
@@ -214,8 +218,9 @@ async def write_off_admin(user_id: int, amount: float) -> str:
         amount: Сумма на которую будет уменьшен баланс
     """
     async with get_session() as session:
-        result = await select(Balance).where(Balance.user_id == user_id)
-        balance = session.execute(result).scalar_one_or_none()
+        balances = await session.execute(
+            select(Balance).where(Balance.user_id == user_id))
+        balance = balances.scalar_one_or_none()
         if isinstance(balance, Balance):
             if balance >= amount:
                 balance.quantity -= amount

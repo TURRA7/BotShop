@@ -18,7 +18,7 @@ Classes:
 Func:
     get_session: Генератор асинхронной сессии
 """
-import datetime
+from datetime import datetime
 from sqlalchemy.orm import DeclarativeBase, relationship, sessionmaker
 from sqlalchemy import (DECIMAL, Boolean, Column, DateTime,
                         ForeignKey, Integer, String)
@@ -65,7 +65,9 @@ class User(Base):
     orders = relationship("Order",
                           back_populates='user',
                           cascade='all, delete-orphan')
-    referred_by = Column(Integer, ForeignKey('user.id'), nullable=True)
+    referred_by = Column(Integer, ForeignKey('users.tg_id'), nullable=True)
+    balance = relationship('Balance', back_populates='user',
+                        cascade='all, delete-orphan')
 
 
 class Product(Base):
@@ -108,7 +110,7 @@ class ShoppingCart(Base):
     __tablename__ = 'shopping_cart'
 
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey('users.id'))
+    user_id = Column(Integer, ForeignKey('users.tg_id'))
     product_id = Column(Integer, ForeignKey('products.id'))
     quantity = Column(Integer, nullable=False)
 
@@ -133,13 +135,13 @@ class Order(Base):
     __tablename__ = 'orders'
 
     id = Column(Integer, primary_key=True)
-    user_id = Column(Integer, ForeignKey('users.id'))
+    user_id = Column(Integer, ForeignKey('users.tg_id'))
     date_order = Column(DateTime, default=datetime.utcnow)
     status = Column(String, default='pending')
     total_price = Column(DECIMAL(10, 2), nullable=False)
 
     user = relationship('User', back_populates="orders")
-    order_items = relationship('Order_item',
+    order_items = relationship('OrderItem',
                                back_populates='order',
                                cascade='all, delete-orphan')
 
@@ -182,7 +184,7 @@ class Balance(Base):
     """
     __tablename__ = 'balances'
 
-    user_id = Column(Integer, ForeignKey('users.id'), primary_key=True)
+    user_id = Column(Integer, ForeignKey('users.tg_id'), primary_key=True)
     quantity = Column(DECIMAL(10, 2), default=0.0)
 
     user = relationship('User', back_populates='balance')
