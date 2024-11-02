@@ -6,15 +6,17 @@ from aiogram import Router, Bot
 from aiogram.types import Message
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
+from aiogram.types.callback_query import CallbackQuery
 
-from core.database.dataTools import (get_user, add_user, add_product,
-                                     increasing_quantity_of_goods, get_balance,
-                                     get_referal_code, top_up_admin,
-                                     write_off_admin)
+from core.database.dataTools import (get_all_products, get_user, add_user,
+                                     add_product, increasing_quantity_of_goods,
+                                     get_balance, get_referal_code,
+                                     top_up_admin, write_off_admin,
+                                     delete_item)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
-from core.keyboards.reply_inline import ReplyKeyBoards
+from core.keyboards.reply_inline import ReplyKeyBoards, InlineKeyBoards
 from core.state_models.state import Product_add, TopUpAdmin, WriteOffAdmin
 from core.tools.tool import generate_gift
 
@@ -259,3 +261,46 @@ async def write_off_amount(message: Message, state: FSMContext) -> None:
     result = await write_off_admin(user_id=data['user_id'],
                                    amount=data['amount'])
     await message.answer(text=result)
+
+
+@router.message(F.text == user_menu[1])
+async def catalog(message: Message) -> None:
+    """Получение всех товаров в каталоге."""
+    user_id = message.from_user.id
+    products = await get_all_products()
+    if products:
+        for item in products:
+            text = (
+                f"id: {item['id']}\n"
+                f"Название: {item['name']}\n"
+                f"Описание: {item['description']}\n"
+                f"Цена: {item['price']} рублей."
+            )
+            if user_id == admin_id:
+                buttons = [
+                    (user_menu[6], f"to_cart:{item['id']}"),
+                    (admin_menu[2], f"delete_item:{item['id']}")
+                ]
+                await message.answer_photo(
+                    photo=item['photo_id'],
+                    caption=text,
+                    reply_markup=InlineKeyBoards.create_keyboard_inline(
+                        buttons).as_markup())
+            else:
+                buttons = [
+                    (user_menu[6], f"to_cart:{item['id']}")
+                    ]
+                await message.answer_photo(
+                    photo=item['photo_id'],
+                    caption=text,
+                    reply_markup=InlineKeyBoards.create_keyboard_inline(
+                        buttons).as_markup())
+    else:
+        await message.answer("Товары отсутствуют в базе данных!")
+
+
+@router.callback_query(F.data.startswith("delete_item:"))
+async def delete_one_item(callback: CallbackQuery) -> None:
+    item_id = callback.data.split(":")[1]
+    result = await delete_item(item_id=int(item_id))
+    await callback.message.edit_caption(caption=result)

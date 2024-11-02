@@ -230,3 +230,48 @@ async def write_off_admin(user_id: int, amount: float) -> str:
                 return "У пользователя нехвататет средств для списания!"
         else:
             return "Пользователя нет в базе или был передан неверный ID"
+
+
+async def get_all_products() -> list[dict[str, Any]]:
+    """
+    Получение всех продуктов из базы данных.
+
+    Returns:
+        Возвращает список словарей, каждый словарь сожержит
+        информацию об одном конкретном товаре.
+    """
+    async with get_session() as session:
+        result = await session.execute(select(Product))
+        product = result.scalars().all()
+        products = [{"id": item.id,
+                     "name": item.product_name,
+                     "description": item.description,
+                     "price": item.price,
+                     "amount": item.amount,
+                     "is_stock": item.is_stock,
+                     "photo_id": item.photo_id} for item in product]
+        return products
+
+
+async def delete_item(item_id: int) -> str:
+    """
+    Удаление конкретного товара.
+
+    Args:
+        item_id: ID товара
+
+    Returns:
+        Удаляет товар из базы данных по переданному ID,
+        возвращает строку с оповещением: успех/провал операции
+    """
+    async with get_session() as session:
+        results = await session.execute(
+            select(Product).where(Product.id == item_id))
+        result = results.scalar_one_or_none()
+        if isinstance(result, Product):
+            await session.delete(result)
+            await session.commit()
+            return "Товар удалён!"
+        else:
+            logger.debug("Ошибка удаления товара!")
+            return "Ошибка удаления товара!"

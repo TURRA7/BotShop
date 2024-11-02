@@ -67,7 +67,7 @@ class User(Base):
                           cascade='all, delete-orphan')
     referred_by = Column(Integer, ForeignKey('users.tg_id'), nullable=True)
     balance = relationship('Balance', back_populates='user',
-                        cascade='all, delete-orphan')
+                           cascade='all, delete-orphan')
 
 
 class Product(Base):

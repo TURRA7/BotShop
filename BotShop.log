@@ -2731,3 +2731,1827 @@ WHERE products.product_name = $1::VARCHAR
 2024-10-31 10:31:50,938 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
 2024-10-31 10:31:50,938 - aiogram.dispatcher - start_polling - INFO - Polling stopped
 2024-10-31 10:31:51,127 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 21:58:51,548 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 21:58:51,627 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 21:58:51,627 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 21:58:51,629 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 21:58:51,629 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 21:58:51,630 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 21:58:51,630 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 21:58:51,631 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 21:58:51,633 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 21:58:51,634 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 21:58:51,641 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 21:58:51,641 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00789s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 21:58:51,642 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 21:58:51,642 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.008366s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 21:58:51,642 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 21:58:51,642 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.008797s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 21:58:51,643 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 21:58:51,643 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.009214s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 21:58:51,643 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 21:58:51,643 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.009615s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 21:58:51,643 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 21:58:52,305 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 21:58:52,305 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 21:58:52,410 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 21:59:35,414 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 21:59:35,422 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 21:59:35,422 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00016s] (859676040,)
+2024-11-02 21:59:35,424 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 21:59:35,703 - aiogram.event - feed_update - INFO - Update id=874833205 is handled. Duration 289 ms by bot id=7942268445
+2024-11-02 21:59:37,223 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 21:59:37,223 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 21:59:37,224 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] ()
+2024-11-02 21:59:37,224 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 21:59:37,225 - aiogram.event - feed_update - INFO - Update id=874833206 is not handled. Duration 3 ms by bot id=7942268445
+2024-11-02 21:59:37,225 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833206 by bot id=7942268445
+AttributeError: 'ChunkedIteratorResult' object has no attribute 'sclars'
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 267, in catalog
+    products = await get_all_products()
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/database/dataTools.py", line 245, in get_all_products
+    product = result.sclars().all()
+              ^^^^^^^^^^^^^
+AttributeError: 'ChunkedIteratorResult' object has no attribute 'sclars'. Did you mean: 'scalars'?
+2024-11-02 22:00:09,000 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:00:09,000 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:00:09,000 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:00:09,343 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:00:16,297 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:00:16,346 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:00:16,346 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:00:16,347 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:00:16,347 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:00:16,347 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:00:16,347 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:00:16,348 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:00:16,351 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:00:16,351 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00017s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:00:16,353 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:00:16,353 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001815s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:00:16,353 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:00:16,353 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002296s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:00:16,354 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:00:16,354 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002757s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:00:16,354 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:00:16,354 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003224s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:00:16,355 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:00:16,355 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003669s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:00:16,355 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:00:16,843 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:00:16,844 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:00:16,907 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:00:19,155 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:00:19,164 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:00:19,164 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00017s] ()
+2024-11-02 22:00:19,165 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:00:20,594 - aiogram.event - feed_update - INFO - Update id=874833207 is handled. Duration 1441 ms by bot id=7942268445
+2024-11-02 22:00:49,604 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:00:49,604 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:00:49,604 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:00:49,821 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:11:37,230 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:11:37,279 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:11:37,279 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:11:37,280 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:11:37,280 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:11:37,281 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:11:37,281 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:11:37,282 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:11:37,284 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:11:37,284 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:11:37,286 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:11:37,286 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001783s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:11:37,286 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:11:37,286 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00222s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:11:37,286 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:11:37,286 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002627s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:11:37,287 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:11:37,287 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003039s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:11:37,287 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:11:37,287 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003431s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:11:37,288 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:11:37,716 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:11:37,716 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:11:37,798 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:11:40,351 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:11:40,360 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:11:40,360 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ()
+2024-11-02 22:11:40,361 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:11:40,361 - aiogram.event - feed_update - INFO - Update id=874833208 is not handled. Duration 11 ms by bot id=7942268445
+2024-11-02 22:11:40,361 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833208 by bot id=7942268445
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 283, in catalog
+    reply_markup=InlineKeyBoards.create_keyboard_inline(buttons
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/keyboards/reply_inline.py", line 53, in create_keyboard_inline
+    links_kb = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2024-11-02 22:12:40,345 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:12:40,345 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:12:40,345 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 59.99s ago] ()
+2024-11-02 22:12:40,346 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:12:40,346 - aiogram.event - feed_update - INFO - Update id=874833209 is not handled. Duration 2 ms by bot id=7942268445
+2024-11-02 22:12:40,346 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833209 by bot id=7942268445
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 283, in catalog
+    reply_markup=InlineKeyBoards.create_keyboard_inline(buttons
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/keyboards/reply_inline.py", line 53, in create_keyboard_inline
+    links_kb = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2024-11-02 22:12:41,715 - aiogram.event - feed_update - INFO - Update id=874833210 is handled. Duration 237 ms by bot id=7942268445
+2024-11-02 22:12:43,999 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:12:44,000 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 22:12:44,000 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] (859676040,)
+2024-11-02 22:12:44,001 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:12:44,097 - aiogram.event - feed_update - INFO - Update id=874833211 is handled. Duration 98 ms by bot id=7942268445
+2024-11-02 22:12:45,804 - aiogram.event - feed_update - INFO - Update id=874833212 is not handled. Duration 1 ms by bot id=7942268445
+2024-11-02 22:12:53,032 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:12:53,032 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-02 22:12:53,032 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] (859676040,)
+2024-11-02 22:12:53,034 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:12:53,212 - aiogram.event - feed_update - INFO - Update id=874833213 is handled. Duration 181 ms by bot id=7942268445
+2024-11-02 22:12:54,451 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:12:54,451 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 22:12:54,451 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 10.45s ago] (859676040,)
+2024-11-02 22:12:54,452 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:12:54,559 - aiogram.event - feed_update - INFO - Update id=874833214 is handled. Duration 108 ms by bot id=7942268445
+2024-11-02 22:17:01,772 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:17:01,773 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:17:01,773 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:17:02,005 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:17:08,990 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:17:09,039 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:17:09,039 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:17:09,040 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:17:09,040 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:17:09,041 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:17:09,041 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:17:09,041 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:17:09,044 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:17:09,044 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:17:09,045 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:17:09,045 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001664s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:17:09,046 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:17:09,046 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00211s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:17:09,046 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:17:09,046 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002494s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:17:09,046 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:17:09,046 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002868s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:17:09,047 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:17:09,047 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003246s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:17:09,047 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:17:09,891 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:17:09,891 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:17:09,969 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:17:12,386 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:17:12,394 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 22:17:12,394 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00013s] (859676040,)
+2024-11-02 22:17:12,396 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:17:12,719 - aiogram.event - feed_update - INFO - Update id=874833215 is handled. Duration 333 ms by bot id=7942268445
+2024-11-02 22:17:18,534 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:17:18,534 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 22:17:18,534 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 6.14s ago] (859676040,)
+2024-11-02 22:17:18,535 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:17:18,682 - aiogram.event - feed_update - INFO - Update id=874833216 is handled. Duration 148 ms by bot id=7942268445
+2024-11-02 22:17:19,544 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:17:19,545 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:17:19,545 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] ()
+2024-11-02 22:17:19,546 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:17:19,546 - aiogram.event - feed_update - INFO - Update id=874833217 is not handled. Duration 4 ms by bot id=7942268445
+2024-11-02 22:17:19,546 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833217 by bot id=7942268445
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 285, in catalog
+    reply_markup=InlineKeyBoards.create_keyboard_inline(buttons
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/keyboards/reply_inline.py", line 52, in create_keyboard_inline
+    links_kb = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2024-11-02 22:18:09,385 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:18:09,385 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:18:09,385 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:18:09,660 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:18:16,053 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:18:16,102 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:18:16,102 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:18:16,103 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:18:16,103 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:18:16,104 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:18:16,104 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:18:16,104 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:18:16,106 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:18:16,107 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:18:16,108 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:18:16,108 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001679s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:18:16,108 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:18:16,109 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002075s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:18:16,109 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:18:16,109 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002443s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:18:16,109 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:18:16,109 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002792s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:18:16,110 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:18:16,110 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003128s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:18:16,110 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:18:16,607 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:18:16,607 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:18:16,691 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:18:17,263 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:18:17,271 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:18:17,271 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ()
+2024-11-02 22:18:17,272 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:18:17,273 - aiogram.event - feed_update - INFO - Update id=874833218 is not handled. Duration 11 ms by bot id=7942268445
+2024-11-02 22:18:17,273 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833218 by bot id=7942268445
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 285, in catalog
+    reply_markup=InlineKeyBoards.create_keyboard_inline(buttons
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/keyboards/reply_inline.py", line 52, in create_keyboard_inline
+    links_kb = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2024-11-02 22:19:44,426 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:19:44,427 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:19:44,427 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:19:44,735 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:20:58,308 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:20:58,356 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:20:58,356 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:20:58,357 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:20:58,357 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:20:58,358 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:20:58,358 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:20:58,359 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:20:58,361 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:20:58,361 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00018s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:20:58,363 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:20:58,363 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001777s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:20:58,363 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:20:58,363 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002278s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:20:58,364 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:20:58,364 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002702s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:20:58,364 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:20:58,364 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003139s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:20:58,365 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:20:58,365 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003538s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:20:58,365 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:20:58,672 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:20:58,672 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:20:58,743 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:20:59,010 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:20:59,018 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:20:59,018 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] ()
+2024-11-02 22:20:59,019 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:20:59,019 - aiogram.event - feed_update - INFO - Update id=874833219 is not handled. Duration 11 ms by bot id=7942268445
+2024-11-02 22:20:59,019 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833219 by bot id=7942268445
+AttributeError: 'InlineKeyboardMarkup' object has no attribute 'add'
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 285, in catalog
+    reply_markup=InlineKeyBoards.create_keyboard_inline(buttons
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/keyboards/reply_inline.py", line 60, in create_keyboard_inline
+    links_kb.add(InlineKeyboardButton(text=text,
+    ^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/pydantic/main.py", line 856, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'InlineKeyboardMarkup' object has no attribute 'add'
+2024-11-02 22:22:47,223 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:22:47,224 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:22:47,224 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:22:47,557 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:22:58,200 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:22:58,249 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:22:58,249 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:22:58,250 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:22:58,250 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:22:58,250 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:22:58,250 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:22:58,251 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:22:58,253 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:22:58,254 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:22:58,255 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:22:58,255 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001643s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:22:58,255 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:22:58,256 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00216s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:22:58,256 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:22:58,256 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002627s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:22:58,256 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:22:58,256 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003064s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:22:58,257 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:22:58,257 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003491s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:22:58,257 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:22:58,713 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:22:58,714 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:22:58,789 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:22:58,905 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:22:58,913 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:22:58,913 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] ()
+2024-11-02 22:22:58,914 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:22:58,915 - aiogram.event - feed_update - INFO - Update id=874833220 is not handled. Duration 11 ms by bot id=7942268445
+2024-11-02 22:22:58,915 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833220 by bot id=7942268445
+ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 285, in catalog
+    reply_markup=InlineKeyBoards.create_keyboard_inline(buttons
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/keyboards/reply_inline.py", line 56, in create_keyboard_inline
+    links_kb = InlineKeyboardMarkup()
+               ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 1 validation error for InlineKeyboardMarkup
+inline_keyboard
+  Field required [type=missing, input_value={}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.9/v/missing
+2024-11-02 22:30:24,429 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:30:24,429 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:30:24,429 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:30:24,679 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:30:40,167 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:30:40,218 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:30:40,218 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:30:40,219 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:30:40,219 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:30:40,219 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:30:40,219 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:30:40,220 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:30:40,223 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:30:40,223 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00017s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:30:40,225 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:30:40,225 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002401s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:30:40,226 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:30:40,226 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002902s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:30:40,226 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:30:40,226 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003363s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:30:40,227 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:30:40,227 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003804s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:30:40,227 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:30:40,227 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.004229s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:30:40,227 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:30:40,525 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:30:40,525 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:30:40,583 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:30:41,102 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:30:41,110 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:30:41,110 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] ()
+2024-11-02 22:30:41,111 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:30:41,112 - aiogram.event - feed_update - INFO - Update id=874833221 is not handled. Duration 11 ms by bot id=7942268445
+2024-11-02 22:30:41,112 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833221 by bot id=7942268445
+ValidationError: 4 validation errors for SendPhoto
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<aiogram.utils.keyboard.I...bject at 0x7f1e48006ed0>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<aiogram.utils.keyboard.I...bject at 0x7f1e48006ed0>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<aiogram.utils.keyboard.I...bject at 0x7f1e48006ed0>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<aiogram.utils.keyboard.I...bject at 0x7f1e48006ed0>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 282, in catalog
+    await message.answer_photo(
+          ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/types/message.py", line 2187, in answer_photo
+    return SendPhoto(
+           ^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/pydantic/main.py", line 212, in __init__
+    validated_self = self.__pydantic_validator__.validate_python(data, self_instance=self)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendPhoto
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<aiogram.utils.keyboard.I...bject at 0x7f1e48006ed0>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<aiogram.utils.keyboard.I...bject at 0x7f1e48006ed0>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<aiogram.utils.keyboard.I...bject at 0x7f1e48006ed0>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<aiogram.utils.keyboard.I...bject at 0x7f1e48006ed0>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.9/v/model_type
+2024-11-02 22:31:28,262 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:31:28,262 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:31:28,262 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:31:28,539 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:31:34,242 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:31:34,290 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:31:34,316 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:31:34,317 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:31:34,317 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:31:34,318 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:31:34,318 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:31:34,318 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:31:34,321 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:31:34,321 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:31:34,322 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:31:34,323 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001723s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:31:34,323 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:31:34,323 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002131s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:31:34,323 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:31:34,323 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.0025s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:31:34,324 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:31:34,324 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00285s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:31:34,324 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:31:34,324 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003202s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:31:34,324 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:31:34,632 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:31:34,632 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:31:34,698 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:31:34,987 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:31:34,995 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:31:34,995 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] ()
+2024-11-02 22:31:34,996 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:31:35,333 - aiogram.event - feed_update - INFO - Update id=874833222 is handled. Duration 347 ms by bot id=7942268445
+2024-11-02 22:31:39,853 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:31:39,859 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:31:39,859 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 4.864s ago] ()
+2024-11-02 22:31:39,860 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:31:40,037 - aiogram.event - feed_update - INFO - Update id=874833223 is handled. Duration 185 ms by bot id=7942268445
+2024-11-02 22:50:14,165 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:50:14,165 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:50:14,166 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:50:14,387 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:50:21,419 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:50:21,469 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:50:21,469 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:50:21,470 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:50:21,470 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:50:21,470 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:50:21,470 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:50:21,471 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:50:21,473 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:50:21,474 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:50:21,475 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:50:21,475 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002117s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:50:21,476 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:50:21,476 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002621s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:50:21,476 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:50:21,476 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003076s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:50:21,477 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:50:21,477 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003529s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:50:21,477 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:50:21,477 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003991s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:50:21,478 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:50:21,800 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:50:21,800 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:50:21,868 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:50:28,171 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:50:28,179 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 22:50:28,180 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00019s] (859676040,)
+2024-11-02 22:50:28,181 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:50:28,419 - aiogram.event - feed_update - INFO - Update id=874833224 is handled. Duration 248 ms by bot id=7942268445
+2024-11-02 22:50:29,179 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:50:29,180 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:50:29,180 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] ()
+2024-11-02 22:50:29,181 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:50:29,281 - aiogram.event - feed_update - INFO - Update id=874833225 is handled. Duration 103 ms by bot id=7942268445
+2024-11-02 22:50:30,580 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:50:30,581 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::VARCHAR
+2024-11-02 22:50:30,581 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] ('1',)
+2024-11-02 22:50:30,583 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:50:30,583 - aiogram.event - feed_update - INFO - Update id=874833226 is not handled. Duration 3 ms by bot id=7942268445
+2024-11-02 22:50:30,583 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833226 by bot id=7942268445
+ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: integer = character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::VARCHAR]
+[parameters: ('1',)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 510, in _prepare_and_execute
+    prepared_stmt, attributes = await adapt_connection._prepare(
+                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 756, in _prepare
+    prepared_stmt = await self._connection.prepare(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/asyncpg/connection.py", line 635, in prepare
+    return await self._prepare(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/asyncpg/connection.py", line 653, in _prepare
+    stmt = await self._get_statement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/asyncpg/connection.py", line 432, in _get_statement
+    statement = await self._protocol.prepare(
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 165, in prepare
+asyncpg.exceptions.UndefinedFunctionError: operator does not exist: integer = character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.ProgrammingError: <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: integer = character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 305, in delete_one_item
+    result = await delete_item(item_id=item_id)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/database/dataTools.py", line 268, in delete_item
+    results = await session.execute(
+              ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/ext/asyncio/session.py", line 461, in execute
+    result = await greenlet_spawn(
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 201, in greenlet_spawn
+    result = context.throw(*sys.exc_info())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2362, in execute
+    return self._execute_internal(
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2247, in _execute_internal
+    result: Result[Any] = compile_state_cls.orm_execute_statement(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/context.py", line 305, in orm_execute_statement
+    result = conn.execute(
+             ^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.ProgrammingError: (sqlalchemy.dialects.postgresql.asyncpg.ProgrammingError) <class 'asyncpg.exceptions.UndefinedFunctionError'>: operator does not exist: integer = character varying
+HINT:  No operator matches the given name and argument types. You might need to add explicit type casts.
+[SQL: SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::VARCHAR]
+[parameters: ('1',)]
+(Background on this error at: https://sqlalche.me/e/20/f405)
+2024-11-02 22:51:17,865 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:51:17,866 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:51:17,866 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:51:18,086 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:51:24,209 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:51:24,261 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:51:24,261 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:51:24,262 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:51:24,262 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:51:24,262 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:51:24,262 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:51:24,263 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:51:24,265 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:51:24,265 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00016s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:51:24,267 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:51:24,267 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001705s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:51:24,267 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:51:24,267 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002144s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:51:24,268 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:51:24,268 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002551s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:51:24,268 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:51:24,268 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002963s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:51:24,269 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:51:24,269 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003357s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:51:24,269 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:51:24,772 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:51:24,772 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:51:24,851 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:51:24,932 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:51:24,940 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:51:24,940 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] ()
+2024-11-02 22:51:24,941 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:51:25,257 - aiogram.event - feed_update - INFO - Update id=874833227 is handled. Duration 326 ms by bot id=7942268445
+2024-11-02 22:51:26,603 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:51:26,604 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-02 22:51:26,604 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (1,)
+2024-11-02 22:51:26,605 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:51:26,705 - aiogram.event - feed_update - INFO - Update id=874833228 is not handled. Duration 102 ms by bot id=7942268445
+2024-11-02 22:51:26,705 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833228 by bot id=7942268445
+TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 306, in delete_one_item
+    await callback.message.edit_text(text=result)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/methods/base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/client/bot.py", line 488, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/client/session/aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/client/session/base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: there is no text in the message to edit
+2024-11-02 22:51:56,676 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:51:56,677 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:51:56,677 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 31.74s ago] ()
+2024-11-02 22:51:56,677 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:51:56,943 - aiogram.event - feed_update - INFO - Update id=874833229 is handled. Duration 268 ms by bot id=7942268445
+2024-11-02 22:52:53,014 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:52:53,015 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:52:53,015 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:52:53,326 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:52:59,836 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:52:59,886 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:52:59,886 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:52:59,888 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:52:59,888 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:52:59,889 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:52:59,889 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:52:59,889 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:52:59,892 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:52:59,892 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:52:59,893 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:52:59,894 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001991s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:52:59,894 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:52:59,894 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00246s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:52:59,894 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:52:59,894 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002851s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:52:59,895 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:52:59,895 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003242s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:52:59,895 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:52:59,895 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003653s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:52:59,896 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:53:00,255 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:53:00,255 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:53:00,332 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:53:00,427 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:53:00,436 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:53:00,436 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00013s] ()
+2024-11-02 22:53:00,437 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:53:00,663 - aiogram.event - feed_update - INFO - Update id=874833230 is handled. Duration 237 ms by bot id=7942268445
+2024-11-02 22:53:01,852 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:53:01,853 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-02 22:53:01,853 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (1,)
+2024-11-02 22:53:01,854 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:53:01,854 - aiogram.event - feed_update - INFO - Update id=874833231 is not handled. Duration 3 ms by bot id=7942268445
+2024-11-02 22:53:01,855 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833231 by bot id=7942268445
+AttributeError: 'Message' object has no attribute 'edit_photo'
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 306, in delete_one_item
+    await callback.message.edit_photo(text=result)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/pydantic/main.py", line 856, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Message' object has no attribute 'edit_photo'. Did you mean: 'reply_photo'?
+2024-11-02 22:55:41,099 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:55:41,100 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:55:41,100 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:55:41,340 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:55:47,045 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:55:47,095 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:55:47,095 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:55:47,096 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:55:47,096 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:55:47,097 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:55:47,097 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:55:47,098 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:55:47,100 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:55:47,100 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:55:47,101 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:55:47,101 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001596s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:55:47,102 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:55:47,102 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002016s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:55:47,102 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:55:47,102 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002429s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:55:47,103 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:55:47,103 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002799s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:55:47,103 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:55:47,103 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003155s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:55:47,103 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:55:47,474 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:55:47,475 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:55:47,556 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:55:51,636 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:55:51,645 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 22:55:51,645 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00017s] (859676040,)
+2024-11-02 22:55:51,646 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:55:52,022 - aiogram.event - feed_update - INFO - Update id=874833232 is handled. Duration 386 ms by bot id=7942268445
+2024-11-02 22:55:52,957 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:55:52,958 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:55:52,958 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] ()
+2024-11-02 22:55:52,959 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:55:53,144 - aiogram.event - feed_update - INFO - Update id=874833233 is handled. Duration 187 ms by bot id=7942268445
+2024-11-02 22:55:53,968 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:55:53,969 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-02 22:55:53,969 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (1,)
+2024-11-02 22:55:53,971 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:55:54,089 - aiogram.event - feed_update - INFO - Update id=874833234 is handled. Duration 121 ms by bot id=7942268445
+2024-11-02 22:55:56,356 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:55:56,357 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:55:56,357 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 3.398s ago] ()
+2024-11-02 22:55:56,357 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:55:56,511 - aiogram.event - feed_update - INFO - Update id=874833235 is handled. Duration 156 ms by bot id=7942268445
+2024-11-02 22:55:57,800 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:55:57,800 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-02 22:55:57,800 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 3.832s ago] (1,)
+2024-11-02 22:55:57,801 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:55:57,895 - aiogram.event - feed_update - INFO - Update id=874833236 is handled. Duration 95 ms by bot id=7942268445
+2024-11-02 22:56:02,463 - aiogram.event - feed_update - INFO - Update id=874833237 is handled. Duration 142 ms by bot id=7942268445
+2024-11-02 22:56:03,990 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:56:03,990 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 22:56:03,990 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 12.35s ago] (859676040,)
+2024-11-02 22:56:03,991 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:56:04,108 - aiogram.event - feed_update - INFO - Update id=874833238 is handled. Duration 118 ms by bot id=7942268445
+2024-11-02 22:56:05,046 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:56:05,046 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:56:05,047 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 12.09s ago] ()
+2024-11-02 22:56:05,047 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:56:05,197 - aiogram.event - feed_update - INFO - Update id=874833239 is handled. Duration 152 ms by bot id=7942268445
+2024-11-02 22:56:41,187 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 22:56:41,187 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:56:41,187 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 22:56:41,407 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 22:56:48,321 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 22:56:48,369 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 22:56:48,369 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:56:48,370 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 22:56:48,370 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:56:48,370 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 22:56:48,370 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 22:56:48,371 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:56:48,373 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:56:48,373 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00013s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:56:48,375 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:56:48,375 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001767s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:56:48,375 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:56:48,375 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002211s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:56:48,376 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:56:48,376 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002595s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:56:48,376 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:56:48,376 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002958s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:56:48,376 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 22:56:48,377 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00331s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 22:56:48,377 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 22:56:48,672 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 22:56:48,673 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 22:56:48,733 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 22:56:49,255 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 22:56:49,264 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 22:56:49,264 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ()
+2024-11-02 22:56:49,265 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 22:56:49,537 - aiogram.event - feed_update - INFO - Update id=874833240 is handled. Duration 283 ms by bot id=7942268445
+2024-11-02 23:00:23,281 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:00:23,281 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 23:00:23,281 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 214s ago] ()
+2024-11-02 23:00:23,281 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:00:23,536 - aiogram.event - feed_update - INFO - Update id=874833241 is handled. Duration 258 ms by bot id=7942268445
+2024-11-02 23:00:25,349 - aiogram.event - feed_update - INFO - Update id=874833242 is not handled. Duration 0 ms by bot id=7942268445
+2024-11-02 23:00:26,101 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:00:26,102 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-02 23:00:26,102 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (1,)
+2024-11-02 23:00:26,103 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:00:26,199 - aiogram.event - feed_update - INFO - Update id=874833243 is handled. Duration 98 ms by bot id=7942268445
+2024-11-02 23:01:08,907 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 23:01:08,907 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 23:01:08,907 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 23:01:09,201 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 23:01:15,382 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 23:01:15,430 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 23:01:15,430 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 23:01:15,430 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 23:01:15,431 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 23:01:15,431 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 23:01:15,431 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 23:01:15,432 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:01:15,434 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:15,434 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00013s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:15,436 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:15,436 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00236s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:15,437 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:15,437 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002785s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:15,437 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:15,437 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003196s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:15,438 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:15,438 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003588s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:15,438 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:15,438 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003976s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:15,438 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:01:15,871 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 23:01:15,871 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 23:01:15,951 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 23:01:21,703 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:01:21,712 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 23:01:21,713 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00021s] (859676040,)
+2024-11-02 23:01:21,714 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:01:22,000 - aiogram.event - feed_update - INFO - Update id=874833244 is handled. Duration 298 ms by bot id=7942268445
+2024-11-02 23:01:22,659 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:01:22,660 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 23:01:22,660 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] ()
+2024-11-02 23:01:22,661 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:01:22,782 - aiogram.event - feed_update - INFO - Update id=874833245 is handled. Duration 124 ms by bot id=7942268445
+2024-11-02 23:01:23,930 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:01:23,931 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-02 23:01:23,931 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (1,)
+2024-11-02 23:01:23,932 - sqlalchemy.engine.Engine - _execute_context - INFO - DELETE FROM products WHERE products.id = $1::INTEGER
+2024-11-02 23:01:23,933 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00009s] (1,)
+2024-11-02 23:01:23,935 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:01:24,055 - aiogram.event - feed_update - INFO - Update id=874833246 is handled. Duration 124 ms by bot id=7942268445
+2024-11-02 23:01:26,684 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:01:26,684 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 23:01:26,684 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 4.024s ago] ()
+2024-11-02 23:01:26,685 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:01:26,787 - aiogram.event - feed_update - INFO - Update id=874833247 is handled. Duration 104 ms by bot id=7942268445
+2024-11-02 23:01:48,549 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 23:01:48,549 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 23:01:48,549 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 23:01:48,778 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-02 23:01:54,789 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-02 23:01:54,837 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-02 23:01:54,838 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 23:01:54,838 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-02 23:01:54,839 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 23:01:54,839 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-02 23:01:54,839 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-02 23:01:54,840 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:01:54,842 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:54,842 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:54,843 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:54,843 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001523s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:54,844 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:54,844 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001906s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:54,844 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:54,844 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002261s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:54,844 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:54,845 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002605s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:54,845 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-02 23:01:54,845 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002944s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-02 23:01:54,845 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:01:55,148 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-02 23:01:55,148 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-02 23:01:55,210 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 23:01:56,189 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:01:56,199 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 23:01:56,199 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00018s] ()
+2024-11-02 23:01:56,201 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:01:56,425 - aiogram.event - feed_update - INFO - Update id=874833248 is handled. Duration 236 ms by bot id=7942268445
+2024-11-02 23:04:34,293 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:04:34,294 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 23:04:34,294 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] (859676040,)
+2024-11-02 23:04:34,295 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:04:34,583 - aiogram.event - feed_update - INFO - Update id=874833249 is handled. Duration 290 ms by bot id=7942268445
+2024-11-02 23:04:36,256 - aiogram.event - feed_update - INFO - Update id=874833250 is handled. Duration 131 ms by bot id=7942268445
+2024-11-02 23:04:38,003 - aiogram.event - feed_update - INFO - Update id=874833251 is handled. Duration 79 ms by bot id=7942268445
+2024-11-02 23:04:42,557 - aiogram.event - feed_update - INFO - Update id=874833252 is handled. Duration 129 ms by bot id=7942268445
+2024-11-02 23:04:45,217 - aiogram.event - feed_update - INFO - Update id=874833253 is handled. Duration 110 ms by bot id=7942268445
+2024-11-02 23:04:47,887 - aiogram.event - feed_update - INFO - Update id=874833254 is handled. Duration 98 ms by bot id=7942268445
+2024-11-02 23:04:55,325 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:04:55,326 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO products (product_name, description, price, amount, is_stock, photo_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::NUMERIC(10, 2), $4::INTEGER, $5::BOOLEAN, $6::VARCHAR) RETURNING products.id
+2024-11-02 23:04:55,326 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] ('Цветок', 'Цветущий', '10.0', 0, True, 'AgACAgIAAxkBAAPKZyZ314ERTIJ2TQdLoMgF83DZdzEAAqj0MRsiKjhJLOCHxSaat6EBAAMCAAN5AAM2BA')
+2024-11-02 23:04:55,329 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:04:55,330 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:04:55,331 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.product_name = $1::VARCHAR
+2024-11-02 23:04:55,331 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] ('Цветок',)
+2024-11-02 23:04:55,335 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE products SET amount=$1::INTEGER WHERE products.id = $2::INTEGER
+2024-11-02 23:04:55,335 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] (1, 2)
+2024-11-02 23:04:55,335 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:04:55,441 - aiogram.event - feed_update - INFO - Update id=874833255 is handled. Duration 117 ms by bot id=7942268445
+2024-11-02 23:04:57,412 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:04:57,412 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 23:04:57,412 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 23.12s ago] (859676040,)
+2024-11-02 23:04:57,412 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:04:57,504 - aiogram.event - feed_update - INFO - Update id=874833256 is handled. Duration 93 ms by bot id=7942268445
+2024-11-02 23:04:58,627 - aiogram.event - feed_update - INFO - Update id=874833257 is handled. Duration 102 ms by bot id=7942268445
+2024-11-02 23:04:59,299 - aiogram.event - feed_update - INFO - Update id=874833258 is handled. Duration 147 ms by bot id=7942268445
+2024-11-02 23:05:02,554 - aiogram.event - feed_update - INFO - Update id=874833259 is handled. Duration 160 ms by bot id=7942268445
+2024-11-02 23:05:09,192 - aiogram.event - feed_update - INFO - Update id=874833260 is handled. Duration 157 ms by bot id=7942268445
+2024-11-02 23:05:11,461 - aiogram.event - feed_update - INFO - Update id=874833261 is handled. Duration 158 ms by bot id=7942268445
+2024-11-02 23:05:12,344 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:05:12,344 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-02 23:05:12,344 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 38.05s ago] (859676040,)
+2024-11-02 23:05:12,345 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:05:12,460 - aiogram.event - feed_update - INFO - Update id=874833262 is handled. Duration 116 ms by bot id=7942268445
+2024-11-02 23:05:19,289 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:05:19,289 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO products (product_name, description, price, amount, is_stock, photo_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::NUMERIC(10, 2), $4::INTEGER, $5::BOOLEAN, $6::VARCHAR) RETURNING products.id
+2024-11-02 23:05:19,289 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 23.96s ago] ('Картина', 'Художественная', '100.0', 0, True, 'AgACAgIAAxkBAAPaZyZ371G9Y_fgIcJxeAGRXC_PWyoAAqn0MRsiKjhJFCY3HiFnbg0BAAMCAAN4AAM2BA')
+2024-11-02 23:05:19,290 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:05:19,291 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:05:19,291 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.product_name = $1::VARCHAR
+2024-11-02 23:05:19,291 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 23.96s ago] ('Картина',)
+2024-11-02 23:05:19,292 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE products SET amount=$1::INTEGER WHERE products.id = $2::INTEGER
+2024-11-02 23:05:19,292 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 23.96s ago] (1, 3)
+2024-11-02 23:05:19,292 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:05:19,408 - aiogram.event - feed_update - INFO - Update id=874833263 is handled. Duration 119 ms by bot id=7942268445
+2024-11-02 23:05:21,235 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:05:21,236 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 23:05:21,236 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 205s ago] ()
+2024-11-02 23:05:21,236 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:05:21,426 - aiogram.event - feed_update - INFO - Update id=874833264 is handled. Duration 192 ms by bot id=7942268445
+2024-11-02 23:05:24,904 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:05:24,905 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-02 23:05:24,905 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (3,)
+2024-11-02 23:05:24,906 - sqlalchemy.engine.Engine - _execute_context - INFO - DELETE FROM products WHERE products.id = $1::INTEGER
+2024-11-02 23:05:24,906 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (3,)
+2024-11-02 23:05:24,907 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:05:25,104 - aiogram.event - feed_update - INFO - Update id=874833265 is handled. Duration 201 ms by bot id=7942268445
+2024-11-02 23:05:26,345 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:05:26,345 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 23:05:26,345 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 210.1s ago] ()
+2024-11-02 23:05:26,346 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:05:26,476 - aiogram.event - feed_update - INFO - Update id=874833266 is handled. Duration 132 ms by bot id=7942268445
+2024-11-02 23:05:27,494 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:05:27,494 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-02 23:05:27,494 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 2.589s ago] (2,)
+2024-11-02 23:05:27,495 - sqlalchemy.engine.Engine - _execute_context - INFO - DELETE FROM products WHERE products.id = $1::INTEGER
+2024-11-02 23:05:27,495 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 2.589s ago] (2,)
+2024-11-02 23:05:27,495 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-02 23:05:27,784 - aiogram.event - feed_update - INFO - Update id=874833267 is handled. Duration 291 ms by bot id=7942268445
+2024-11-02 23:05:28,285 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-02 23:05:28,285 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-02 23:05:28,285 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 212.1s ago] ()
+2024-11-02 23:05:28,286 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-02 23:05:28,431 - aiogram.event - feed_update - INFO - Update id=874833268 is handled. Duration 146 ms by bot id=7942268445
+2024-11-02 23:08:38,028 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-02 23:08:38,028 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-02 23:08:38,028 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-02 23:08:38,275 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
