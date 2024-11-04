@@ -326,3 +326,31 @@ async def get_user_cart(user_id: int) -> Product:
         results = await session.execute(request)
         result = results.scalars().all()
         return result
+
+
+async def item_un_cart(user_id: int, product_id: int) -> str:
+    """
+    Удаление конкретного товара из корзины пользователя.
+
+    Args:
+        user_id: ID пользователя
+        product_id: ID продукта
+
+    Returns:
+        ...
+    """
+    async with get_session() as session:
+        request = (
+            select(ShoppingCart)
+            .where(ShoppingCart.user_id == user_id)
+            .where(ShoppingCart.product_id == product_id)
+        )
+        results = await session.execute(request)
+        result = results.scalar_one_or_none()
+        if isinstance(result, ShoppingCart):
+            await session.delete(result)
+            await session.commit()
+            return "Товар удалён из корзины!"
+        else:
+            logger.debug("Ошибка удаления товара из корзины!")
+            return "Ошибка удаления товара из корзины!"

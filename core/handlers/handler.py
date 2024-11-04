@@ -12,7 +12,8 @@ from core.database.dataTools import (get_all_products, get_user, add_user,
                                      add_product, increasing_quantity_of_goods,
                                      get_balance, get_referal_code,
                                      top_up_admin, write_off_admin,
-                                     delete_item, add_to_cart, get_user_cart)
+                                     delete_item, add_to_cart, get_user_cart,
+                                     item_un_cart)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
@@ -301,6 +302,7 @@ async def catalog(message: Message) -> None:
 
 @router.callback_query(F.data.startswith("delete_item:"))
 async def delete_one_item(callback: CallbackQuery) -> None:
+    """Удаление товара из каталога."""
     item_id = callback.data.split(":")[1]
     result = await delete_item(item_id=int(item_id))
     await callback.message.edit_caption(caption=result)
@@ -308,6 +310,7 @@ async def delete_one_item(callback: CallbackQuery) -> None:
 
 @router.callback_query(F.data.startswith("to_cart:"))
 async def item_to_cart(callback: CallbackQuery) -> None:
+    """Добавление товаров в корзину."""
     product_id = callback.data.split(":")[1]
     user_id = callback.from_user.id
     result = await add_to_cart(user_id=user_id,
@@ -338,3 +341,13 @@ async def get_cart(message: Message) -> None:
                     buttons).as_markup())
     else:
         await message.answer("Корзина пуста!")
+
+
+@router.callback_query(F.data.startswith("un-cart:"))
+async def un_cart(callback: CallbackQuery) -> None:
+    """Удаление товара из корзины."""
+    product_id = callback.data.split(":")[1]
+    user_id = callback.from_user.id
+    result = await item_un_cart(user_id=user_id,
+                                product_id=int(product_id))
+    await callback.message.edit_caption(caption=result)
