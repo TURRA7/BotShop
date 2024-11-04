@@ -12,7 +12,7 @@ from core.database.dataTools import (get_all_products, get_user, add_user,
                                      add_product, increasing_quantity_of_goods,
                                      get_balance, get_referal_code,
                                      top_up_admin, write_off_admin,
-                                     delete_item)
+                                     delete_item, add_to_cart, get_user_cart)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
@@ -304,3 +304,37 @@ async def delete_one_item(callback: CallbackQuery) -> None:
     item_id = callback.data.split(":")[1]
     result = await delete_item(item_id=int(item_id))
     await callback.message.edit_caption(caption=result)
+
+
+@router.callback_query(F.data.startswith("to_cart:"))
+async def item_to_cart(callback: CallbackQuery) -> None:
+    product_id = callback.data.split(":")[1]
+    user_id = callback.from_user.id
+    result = await add_to_cart(user_id=user_id,
+                               product_id=int(product_id))
+    await callback.message.edit_caption(caption=result)
+
+
+@router.message(F.text == user_menu[2])
+async def get_cart(message: Message) -> None:
+    """Получение корзины пользователя."""
+    user_id = message.from_user.id
+    products = await get_user_cart(user_id=user_id)
+    if products:
+        for product in products:
+            text = (
+                f"id: {product.id}\n"
+                f"Название: {product.product_name}\n"
+                f"Описание: {product.description}\n"
+                f"Цена: {product.price} рублей."
+            )
+            buttons = [
+                    (user_menu[7], f"un-cart:{product.id}"),
+            ]
+            await message.answer_photo(
+                photo=product.photo_id,
+                caption=text,
+                reply_markup=InlineKeyBoards.create_keyboard_inline(
+                    buttons).as_markup())
+    else:
+        await message.answer("Корзина пуста!")

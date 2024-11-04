@@ -112,7 +112,6 @@ class ShoppingCart(Base):
     id = Column(Integer, primary_key=True)
     user_id = Column(Integer, ForeignKey('users.tg_id'))
     product_id = Column(Integer, ForeignKey('products.id'))
-    quantity = Column(Integer, nullable=False)
 
     user = relationship('User', back_populates="shopping_cart")
     product = relationship('Product')

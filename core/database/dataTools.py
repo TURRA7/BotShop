@@ -5,7 +5,8 @@ from typing import Any, AsyncGenerator
 from sqlalchemy import select
 
 from core.db_models.models import (async_session, engine,
-                                   Base, User, Product, Balance)
+                                   Base, User, Product, Balance,
+                                   ShoppingCart)
 from core.tools.tool import generate_code
 
 
@@ -275,3 +276,53 @@ async def delete_item(item_id: int) -> str:
         else:
             logger.debug("Ошибка удаления товара!")
             return "Ошибка удаления товара!"
+
+
+async def add_to_cart(user_id: int, product_id: int) -> str:
+    """
+    Добавление товаров в корзину.
+
+    Args:
+        user_id: ID пользователя
+        product_id: ID продукта
+
+    Returns:
+        Добавляет продукт в корзину, возвращает строку
+        с оповещением
+    """
+    async with get_session() as session:
+        item = ShoppingCart(user_id=user_id,
+                            product_id=product_id)
+        if (
+            isinstance(item, ShoppingCart) and
+            item.user_id and item.product_id
+        ):
+            session.add(item)
+            await session.commit()
+            return "Продукт добавлен в корзину!"
+        else:
+            logger.debug(
+                "Проблема с добавлением продукта")
+            return "Ошибка продукта или корзины!"
+
+
+async def get_user_cart(user_id: int) -> Product:
+    """
+    Получение корзины пользователя.
+
+    Args:
+        user_id: ID пользователя
+
+    Returns:
+        Возвращает список продуктов, добавленных
+        конкретным пользователем
+    """
+    async with get_session() as session:
+        request = (
+            select(Product)
+            .join(ShoppingCart, Product.id == ShoppingCart.product_id)
+            .where(ShoppingCart.user_id == user_id)
+        )
+        results = await session.execute(request)
+        result = results.scalars().all()
+        return result
