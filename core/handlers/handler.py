@@ -56,7 +56,8 @@ async def get_start(message: Message) -> None:
                                                               user_menu[2],
                                                               user_menu[3],
                                                               user_menu[4],
-                                                              user_menu[5]))
+                                                              user_menu[5],
+                                                              user_menu[9]))
     else:
         await message.answer(
             f"Привет <b>{message.from_user.first_name}</b>!",
@@ -64,7 +65,8 @@ async def get_start(message: Message) -> None:
                                                               user_menu[2],
                                                               user_menu[3],
                                                               user_menu[4],
-                                                              user_menu[5]))
+                                                              user_menu[5],
+                                                              user_menu[9]))
 
 
 @router.message(F.text == admin_menu[7], F.from_user.id == admin_id)
@@ -170,10 +172,7 @@ async def get_user_balance(message: Message) -> None:
     """Получение баланса пользователя."""
     user_id = message.from_user.id
     balance = await get_balance(user_id=user_id)
-    if isinstance(balance, float):
-        await message.answer(f"Ваш баланс: {str(balance)} р.")
-    else:
-        await message.answer(text=str(balance))
+    await message.answer(f"Ваш баланс: {str(balance)} р.")
 
 
 @router.message(F.text == user_menu[4])
