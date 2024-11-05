@@ -223,7 +223,7 @@ async def write_off_admin(user_id: int, amount: float) -> str:
             select(Balance).where(Balance.user_id == user_id))
         balance = balances.scalar_one_or_none()
         if isinstance(balance, Balance):
-            if balance >= amount:
+            if balance.quantity >= amount:
                 balance.quantity -= amount
                 await session.commit()
                 return "Сумма списанна с баланса!"
