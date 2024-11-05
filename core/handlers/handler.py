@@ -245,6 +245,7 @@ async def top_up_start(message: Message, state: FSMContext) -> None:
     """Ручное пополнение баланса (FSM). Указание ID пользователя."""
     await state.set_state(TopUpAdmin.user_id)
     await message.answer(fsm_product[7])
+    await message.answer(fsm_product[12])
 
 
 @router.message(TopUpAdmin.user_id, F.from_user.id == admin_id)
@@ -270,6 +271,7 @@ async def write_off_start(message: Message, state: FSMContext) -> None:
     """Ручное списание средств (FSM). Указание ID пользователя."""
     await state.set_state(WriteOffAdmin.user_id)
     await message.answer(fsm_product[7])
+    await message.answer(fsm_product[12])
 
 
 @router.message(WriteOffAdmin.user_id, F.from_user.id == admin_id)
