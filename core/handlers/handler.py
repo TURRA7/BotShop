@@ -1,7 +1,7 @@
 """Модуль обработчиков Aiogram3."""
 import os
 import logging
-from decimal import Decimal
+from decimal import Decimal, InvalidOperation
 from aiogram import F
 from aiogram import Router, Bot
 from aiogram.types import Message
@@ -251,7 +251,12 @@ async def top_up_start(message: Message, state: FSMContext) -> None:
 @router.message(TopUpAdmin.user_id, F.from_user.id == admin_id)
 async def top_up_user_id(message: Message, state: FSMContext) -> None:
     """Ручное пополнение баланса (FSM). Указание суммы."""
-    await state.update_data(user_id=message.text)
+    user = message.text
+    if not user.isdigit():
+        await message.answer(fsm_product[13])
+        return
+
+    await state.update_data(user_id=int(user))
     await state.set_state(TopUpAdmin.amount)
     await message.answer(fsm_product[8])
 
@@ -259,11 +264,19 @@ async def top_up_user_id(message: Message, state: FSMContext) -> None:
 @router.message(TopUpAdmin.amount, F.from_user.id == admin_id)
 async def top_up_amount(message: Message, state: FSMContext) -> None:
     """Ручное пополнение баланса (FSM). Пополнение баланса."""
-    await state.update_data(amount=message.text)
+    user_amount = message.text
+    try:
+        value = Decimal(user_amount)
+    except (ValueError, InvalidOperation):
+        await message.answer(fsm_product[14])
+        return
+
+    await state.update_data(amount=value)
     data: dict = await state.get_data()
-    result = await top_up_admin(user_id=int(data['user_id']),
-                                amount=Decimal(data['amount']))
+    result = await top_up_admin(user_id=data['user_id'],
+                                amount=data['amount'])
     await message.answer(text=result)
+    await state.clear()
 
 
 @router.message(F.text == admin_menu[5], F.from_user.id == admin_id)
@@ -277,7 +290,12 @@ async def write_off_start(message: Message, state: FSMContext) -> None:
 @router.message(WriteOffAdmin.user_id, F.from_user.id == admin_id)
 async def write_off_user_id(message: Message, state: FSMContext) -> None:
     """Ручное списание средств (FSM). Указание суммы."""
-    await state.update_data(user_id=message.text)
+    user = message.text
+    if not user.isdigit():
+        await message.answer(fsm_product[13])
+        return
+
+    await state.update_data(user_id=int(user))
     await state.set_state(WriteOffAdmin.amount)
     await message.answer(fsm_product[11])
 
@@ -285,11 +303,18 @@ async def write_off_user_id(message: Message, state: FSMContext) -> None:
 @router.message(WriteOffAdmin.amount, F.from_user.id == admin_id)
 async def write_off_amount(message: Message, state: FSMContext) -> None:
     """Ручное списание средств (FSM). Списание средств."""
-    await state.update_data(amount=message.text)
+    user_amount = message.text
+    try:
+        value = Decimal(user_amount)
+    except (ValueError, InvalidOperation):
+        await message.answer(fsm_product[14])
+        return
+    await state.update_data(amount=value)
     data: dict = await state.get_data()
-    result = await write_off_admin(user_id=int(data['user_id']),
-                                   amount=Decimal(data['amount']))
+    result = await write_off_admin(user_id=data['user_id'],
+                                   amount=data['amount'])
     await message.answer(text=result)
+    await state.clear()
 
 
 @router.message(F.text == user_menu[1])
