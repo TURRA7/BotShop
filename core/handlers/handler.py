@@ -133,6 +133,7 @@ async def add_product_name(message: Message, state: FSMContext) -> None:
         Фиксирует название товара, переходин к следующему
         состоянию, просит указать описание товара
     """
+
     await state.update_data(name=message.text)
     await state.set_state(Product_add.description)
     await message.answer(fsm_product[2])
@@ -163,9 +164,22 @@ async def add_product_price(message: Message, state: FSMContext) -> None:
         Фиксирует цену товара, переходин к следующему
         состоянию, просит добавить фото
     """
-    await state.update_data(price=message.text)
-    await state.set_state(Product_add.photo_id)
-    await message.answer(fsm_product[4])
+    price = message.text
+    item_price = None
+    try:
+        value = Decimal(price)
+        if -99999999.99 < value < 99999999.99:
+            item_price = value
+        else:
+            await message.answer(fsm_product[15])
+            return
+    except (ValueError, InvalidOperation):
+        await message.answer(fsm_product[14])
+        return
+    if item_price is not None:
+        await state.update_data(price=item_price)
+        await state.set_state(Product_add.photo_id)
+        await message.answer(fsm_product[4])
 
 
 @router.message(Product_add.photo_id, F.from_user.id == admin_id)
