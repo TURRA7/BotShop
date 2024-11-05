@@ -78,9 +78,35 @@ async def moder_menu(message: Message) -> None:
                                                               admin_menu[3],
                                                               admin_menu[4],
                                                               admin_menu[5],
-                                                              admin_menu[6],
                                                               admin_menu[8]
                                                               ))
+
+
+@router.message(F.text == admin_menu[8])
+async def backward(message: Message) -> None:
+    """Обработка кнопки  'НАЗАД' - возвращает в главное меню."""
+    user_id = message.from_user.id
+    if user_id == admin_id:
+        await message.answer(
+            text="Вы в меню!",
+            reply_markup=ReplyKeyBoards.create_keyboard_reply(
+                admin_menu[7],
+                user_menu[1],
+                user_menu[2],
+                user_menu[3],
+                user_menu[4],
+                user_menu[5],
+                user_menu[9]))
+    else:
+        await message.answer(
+            text="Вы в меню!",
+            reply_markup=ReplyKeyBoards.create_keyboard_reply(
+                user_menu[1],
+                user_menu[2],
+                user_menu[3],
+                user_menu[4],
+                user_menu[5],
+                user_menu[9]))
 
 
 @router.message(F.text == admin_menu[1], F.from_user.id == admin_id)
@@ -338,6 +364,11 @@ async def get_cart(message: Message) -> None:
                 caption=text,
                 reply_markup=InlineKeyBoards.create_keyboard_inline(
                     buttons).as_markup())
+        await message.answer(text="Выберите действие...",
+                             reply_markup=ReplyKeyBoards.create_keyboard_reply(
+                                 user_menu[10],
+                                 admin_menu[8]
+                                 ))
     else:
         await message.answer("Корзина пуста!")
 
