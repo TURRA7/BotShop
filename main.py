@@ -42,7 +42,7 @@ async def start() -> None:
 
     try:
         await create_tables()
-        await dp.start_polling(bot)
+        await dp.start_polling(bot, skip_updates=False)
     except Exception as ex:
         logger.debug(f"Ошибка приложения {ex}")
     finally:

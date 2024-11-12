@@ -1,0 +1,1501 @@
+2024-11-12 10:16:05,165 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 10:16:05,237 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 10:16:05,237 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:16:05,239 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 10:16:05,239 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:16:05,240 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 10:16:05,240 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:16:05,241 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:16:05,243 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:16:05,244 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:16:05,252 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:16:05,252 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.008234s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:16:05,252 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:16:05,252 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.008707s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:16:05,252 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:16:05,252 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00911s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:16:05,253 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:16:05,253 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.009506s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:16:05,253 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:16:05,253 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.009894s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:16:05,254 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:16:05,633 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 10:16:05,633 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 10:16:05,739 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 10:16:13,433 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:16:13,442 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 10:16:13,442 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00016s] (859676040,)
+2024-11-12 10:16:13,445 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:16:13,788 - aiogram.event - feed_update - INFO - Update id=874833585 is handled. Duration 354 ms by bot id=7942268445
+2024-11-12 10:16:14,650 - aiogram.event - feed_update - INFO - Update id=874833586 is handled. Duration 133 ms by bot id=7942268445
+2024-11-12 10:16:16,950 - aiogram.event - feed_update - INFO - Update id=874833587 is handled. Duration 96 ms by bot id=7942268445
+2024-11-12 10:16:42,782 - aiogram.event - feed_update - INFO - Update id=874833588 is handled. Duration 247 ms by bot id=7942268445
+2024-11-12 10:17:09,248 - aiogram.event - feed_update - INFO - Update id=874833589 is handled. Duration 292 ms by bot id=7942268445
+2024-11-12 10:17:16,062 - aiogram.event - feed_update - INFO - Update id=874833590 is handled. Duration 88 ms by bot id=7942268445
+2024-11-12 10:17:22,760 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:17:22,761 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO products (product_name, description, price, amount, is_stock, photo_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::NUMERIC(10, 2), $4::INTEGER, $5::BOOLEAN, $6::VARCHAR) RETURNING products.id
+2024-11-12 10:17:22,761 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('Counter strike 2', 'Легендарный шутер от первого лица, со своей экономикой и системой рангов!', Decimal('7'), 0, True, 'AgACAgIAAxkBAAIDkmcy8vLoMcBz6m54Aqu6XKIysVubAALW5TEbJo6ZSelxiC9sn2iZAQADAgADeAADNgQ')
+2024-11-12 10:17:22,766 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:17:22,766 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:17:22,767 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.product_name = $1::VARCHAR
+2024-11-12 10:17:22,767 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] ('Counter strike 2',)
+2024-11-12 10:17:22,769 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE products SET amount=$1::INTEGER WHERE products.id = $2::INTEGER
+2024-11-12 10:17:22,769 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (1, 3)
+2024-11-12 10:17:22,771 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:17:22,879 - aiogram.event - feed_update - INFO - Update id=874833591 is handled. Duration 120 ms by bot id=7942268445
+2024-11-12 10:17:25,318 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:17:25,319 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 10:17:25,319 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 71.88s ago] (859676040,)
+2024-11-12 10:17:25,319 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:17:25,477 - aiogram.event - feed_update - INFO - Update id=874833592 is handled. Duration 159 ms by bot id=7942268445
+2024-11-12 10:17:26,457 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:17:26,458 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 10:17:26,458 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] ()
+2024-11-12 10:17:26,459 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:17:27,116 - aiogram.event - feed_update - INFO - Update id=874833593 is handled. Duration 660 ms by bot id=7942268445
+2024-11-12 10:17:29,082 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:17:29,082 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.id = $1::INTEGER
+2024-11-12 10:17:29,082 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (1,)
+2024-11-12 10:17:29,084 - sqlalchemy.engine.Engine - _execute_context - INFO - DELETE FROM products WHERE products.id = $1::INTEGER
+2024-11-12 10:17:29,084 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00009s] (1,)
+2024-11-12 10:17:29,085 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:17:29,178 - aiogram.event - feed_update - INFO - Update id=874833594 is handled. Duration 96 ms by bot id=7942268445
+2024-11-12 10:18:31,340 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:18:31,340 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 10:18:31,341 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 64.88s ago] ()
+2024-11-12 10:18:31,341 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:18:31,539 - aiogram.event - feed_update - INFO - Update id=874833595 is handled. Duration 200 ms by bot id=7942268445
+2024-11-12 10:18:35,802 - aiogram.event - feed_update - INFO - Update id=874833596 is handled. Duration 203 ms by bot id=7942268445
+2024-11-12 10:18:36,602 - aiogram.event - feed_update - INFO - Update id=874833597 is handled. Duration 96 ms by bot id=7942268445
+2024-11-12 10:18:44,768 - aiogram.event - feed_update - INFO - Update id=874833598 is handled. Duration 101 ms by bot id=7942268445
+2024-11-12 10:19:00,119 - aiogram.event - feed_update - INFO - Update id=874833599 is handled. Duration 213 ms by bot id=7942268445
+2024-11-12 10:19:03,199 - aiogram.event - feed_update - INFO - Update id=874833600 is handled. Duration 110 ms by bot id=7942268445
+2024-11-12 10:19:07,432 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:19:07,432 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO products (product_name, description, price, amount, is_stock, photo_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::NUMERIC(10, 2), $4::INTEGER, $5::BOOLEAN, $6::VARCHAR) RETURNING products.id
+2024-11-12 10:19:07,432 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 104.7s ago] ('DayZ', 'Многопользовательская компьютерная игра в жанре симулятора выживания с открытым миром, разработанная чешской компанией Bohemia Interactive.', Decimal('9'), 0, True, 'AgACAgIAAxkBAAIDpWcy81sGmEhz3-kFGh1UsHr7OqXmAALY5TEbJo6ZSTR5bcSurQG1AQADAgADeAADNgQ')
+2024-11-12 10:19:07,433 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:19:07,434 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:19:07,434 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.product_name = $1::VARCHAR
+2024-11-12 10:19:07,434 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 104.7s ago] ('DayZ',)
+2024-11-12 10:19:07,434 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE products SET amount=$1::INTEGER WHERE products.id = $2::INTEGER
+2024-11-12 10:19:07,434 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 104.7s ago] (1, 4)
+2024-11-12 10:19:07,435 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:19:07,550 - aiogram.event - feed_update - INFO - Update id=874833601 is handled. Duration 119 ms by bot id=7942268445
+2024-11-12 10:19:11,377 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:19:11,378 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 10:19:11,378 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 177.9s ago] (859676040,)
+2024-11-12 10:19:11,379 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:19:11,464 - aiogram.event - feed_update - INFO - Update id=874833602 is handled. Duration 87 ms by bot id=7942268445
+2024-11-12 10:19:12,843 - aiogram.event - feed_update - INFO - Update id=874833603 is handled. Duration 89 ms by bot id=7942268445
+2024-11-12 10:19:14,897 - aiogram.event - feed_update - INFO - Update id=874833604 is handled. Duration 131 ms by bot id=7942268445
+2024-11-12 10:19:15,407 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:19:15,408 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 10:19:15,408 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 108.9s ago] ()
+2024-11-12 10:19:15,408 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:19:15,604 - aiogram.event - feed_update - INFO - Update id=874833605 is handled. Duration 198 ms by bot id=7942268445
+2024-11-12 10:19:36,003 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:19:36,003 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 10:19:36,003 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 202.6s ago] (859676040,)
+2024-11-12 10:19:36,004 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:19:36,297 - aiogram.event - feed_update - INFO - Update id=874833606 is handled. Duration 294 ms by bot id=7942268445
+2024-11-12 10:19:37,044 - aiogram.event - feed_update - INFO - Update id=874833607 is handled. Duration 133 ms by bot id=7942268445
+2024-11-12 10:19:37,549 - aiogram.event - feed_update - INFO - Update id=874833608 is handled. Duration 92 ms by bot id=7942268445
+2024-11-12 10:20:00,894 - aiogram.event - feed_update - INFO - Update id=874833609 is handled. Duration 331 ms by bot id=7942268445
+2024-11-12 10:20:14,081 - aiogram.event - feed_update - INFO - Update id=874833610 is handled. Duration 130 ms by bot id=7942268445
+2024-11-12 10:20:17,162 - aiogram.event - feed_update - INFO - Update id=874833611 is handled. Duration 193 ms by bot id=7942268445
+2024-11-12 10:20:21,972 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:20:21,972 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO products (product_name, description, price, amount, is_stock, photo_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::NUMERIC(10, 2), $4::INTEGER, $5::BOOLEAN, $6::VARCHAR) RETURNING products.id
+2024-11-12 10:20:21,972 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 179.2s ago] ('Forza Horizon 4', 'Видеоигра в жанре аркадного автосимулятора.', Decimal('4'), 0, True, 'AgACAgIAAxkBAAIDvGcy86V25n1f-b6hs9lMjml96mvuAALZ5TEbJo6ZSTcMqXAxbyHTAQADAgADeAADNgQ')
+2024-11-12 10:20:21,973 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:20:22,025 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:20:22,026 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.product_name = $1::VARCHAR
+2024-11-12 10:20:22,026 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 179.3s ago] ('Forza Horizon 4',)
+2024-11-12 10:20:22,026 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE products SET amount=$1::INTEGER WHERE products.id = $2::INTEGER
+2024-11-12 10:20:22,026 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 179.3s ago] (1, 5)
+2024-11-12 10:20:22,027 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:20:22,189 - aiogram.event - feed_update - INFO - Update id=874833612 is handled. Duration 217 ms by bot id=7942268445
+2024-11-12 10:20:25,501 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:20:25,501 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 10:20:25,501 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 252.1s ago] (859676040,)
+2024-11-12 10:20:25,502 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:20:25,640 - aiogram.event - feed_update - INFO - Update id=874833613 is handled. Duration 139 ms by bot id=7942268445
+2024-11-12 10:20:26,518 - aiogram.event - feed_update - INFO - Update id=874833614 is handled. Duration 190 ms by bot id=7942268445
+2024-11-12 10:20:27,672 - aiogram.event - feed_update - INFO - Update id=874833615 is handled. Duration 294 ms by bot id=7942268445
+2024-11-12 10:20:47,945 - aiogram.event - feed_update - INFO - Update id=874833616 is handled. Duration 252 ms by bot id=7942268445
+2024-11-12 10:21:11,228 - aiogram.event - feed_update - INFO - Update id=874833617 is handled. Duration 356 ms by bot id=7942268445
+2024-11-12 10:21:13,526 - aiogram.event - feed_update - INFO - Update id=874833618 is handled. Duration 76 ms by bot id=7942268445
+2024-11-12 10:21:19,271 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:21:19,271 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO products (product_name, description, price, amount, is_stock, photo_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::NUMERIC(10, 2), $4::INTEGER, $5::BOOLEAN, $6::VARCHAR) RETURNING products.id
+2024-11-12 10:21:19,271 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 236.5s ago] ('Rust', 'Компьютерная игра в жанре симулятора выживания.', Decimal('5'), 0, True, 'AgACAgIAAxkBAAIDymcy89-hGVTKOTDsvxFYUa4QJcOfAALa5TEbJo6ZSebHjfnlaEW9AQADAgADeAADNgQ')
+2024-11-12 10:21:19,272 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:21:19,332 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:21:19,332 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.product_name = $1::VARCHAR
+2024-11-12 10:21:19,332 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 236.6s ago] ('Rust',)
+2024-11-12 10:21:19,333 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE products SET amount=$1::INTEGER WHERE products.id = $2::INTEGER
+2024-11-12 10:21:19,333 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 236.6s ago] (1, 6)
+2024-11-12 10:21:19,333 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:21:19,461 - aiogram.event - feed_update - INFO - Update id=874833619 is handled. Duration 191 ms by bot id=7942268445
+2024-11-12 10:21:23,549 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:21:23,549 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 10:21:23,549 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 310.1s ago] (859676040,)
+2024-11-12 10:21:23,550 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:21:23,663 - aiogram.event - feed_update - INFO - Update id=874833620 is handled. Duration 114 ms by bot id=7942268445
+2024-11-12 10:21:24,849 - aiogram.event - feed_update - INFO - Update id=874833621 is handled. Duration 74 ms by bot id=7942268445
+2024-11-12 10:21:25,171 - aiogram.event - feed_update - INFO - Update id=874833622 is handled. Duration 74 ms by bot id=7942268445
+2024-11-12 10:21:43,400 - aiogram.event - feed_update - INFO - Update id=874833623 is handled. Duration 197 ms by bot id=7942268445
+2024-11-12 10:21:53,465 - aiogram.event - feed_update - INFO - Update id=874833624 is handled. Duration 91 ms by bot id=7942268445
+2024-11-12 10:21:55,120 - aiogram.event - feed_update - INFO - Update id=874833625 is handled. Duration 70 ms by bot id=7942268445
+2024-11-12 10:21:59,150 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:21:59,151 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO products (product_name, description, price, amount, is_stock, photo_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::NUMERIC(10, 2), $4::INTEGER, $5::BOOLEAN, $6::VARCHAR) RETURNING products.id
+2024-11-12 10:21:59,151 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 276.4s ago] ('Hitman', 'Компьютерная игра в жанре стелс-экшен.', Decimal('2'), 0, True, 'AgACAgIAAxkBAAID2Gcy9AclXxQefOiXg25hHcjaKz94AALb5TEbJo6ZSQJhLNNImIswAQADAgADeAADNgQ')
+2024-11-12 10:21:59,151 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:21:59,216 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:21:59,216 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.product_name = $1::VARCHAR
+2024-11-12 10:21:59,216 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 276.4s ago] ('Hitman',)
+2024-11-12 10:21:59,216 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE products SET amount=$1::INTEGER WHERE products.id = $2::INTEGER
+2024-11-12 10:21:59,216 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 276.4s ago] (1, 7)
+2024-11-12 10:21:59,217 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:21:59,358 - aiogram.event - feed_update - INFO - Update id=874833626 is handled. Duration 208 ms by bot id=7942268445
+2024-11-12 10:22:38,128 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 10:22:38,128 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 10:22:38,128 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 10:22:38,347 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 10:22:43,797 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 10:22:43,847 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 10:22:43,847 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:22:43,848 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 10:22:43,848 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:22:43,849 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 10:22:43,849 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:22:43,849 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:22:43,852 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:22:43,852 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:22:43,854 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:22:43,854 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002037s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:22:43,854 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:22:43,854 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002464s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:22:43,855 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:22:43,855 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002853s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:22:43,855 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:22:43,855 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003253s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:22:43,855 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:22:43,855 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00362s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:22:43,856 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:22:44,173 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 10:22:44,173 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 10:22:44,232 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 10:22:44,937 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:22:44,946 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 10:22:44,946 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] (859676040,)
+2024-11-12 10:22:44,947 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:22:45,149 - aiogram.event - feed_update - INFO - Update id=874833627 is handled. Duration 212 ms by bot id=7942268445
+2024-11-12 10:22:45,788 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:22:45,790 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 10:22:45,790 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] ()
+2024-11-12 10:22:45,791 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:22:46,285 - aiogram.event - feed_update - INFO - Update id=874833628 is handled. Duration 498 ms by bot id=7942268445
+2024-11-12 10:23:11,246 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 10:23:11,247 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 10:23:11,247 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 10:23:11,477 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 10:23:16,040 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 10:23:16,089 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 10:23:16,089 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:23:16,090 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 10:23:16,090 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:23:16,091 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 10:23:16,091 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 10:23:16,091 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:23:16,094 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:23:16,094 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:23:16,096 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:23:16,096 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001857s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:23:16,096 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:23:16,096 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002354s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:23:16,096 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:23:16,097 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002791s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:23:16,097 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:23:16,097 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003265s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:23:16,097 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 10:23:16,097 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003702s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 10:23:16,098 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:23:16,372 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 10:23:16,372 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 10:23:16,434 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 10:23:18,917 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:23:18,927 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 10:23:18,927 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00018s] ()
+2024-11-12 10:23:18,929 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:23:19,637 - aiogram.event - feed_update - INFO - Update id=874833629 is handled. Duration 722 ms by bot id=7942268445
+2024-11-12 10:23:36,769 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:23:36,771 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 10:23:36,771 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] (859676040,)
+2024-11-12 10:23:36,772 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:23:36,994 - aiogram.event - feed_update - INFO - Update id=874833630 is handled. Duration 225 ms by bot id=7942268445
+2024-11-12 10:23:37,961 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:23:37,961 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 10:23:37,961 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 19.03s ago] ()
+2024-11-12 10:23:37,961 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:23:38,416 - aiogram.event - feed_update - INFO - Update id=874833631 is handled. Duration 457 ms by bot id=7942268445
+2024-11-12 10:24:37,593 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:24:37,593 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 10:24:37,593 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 78.67s ago] ()
+2024-11-12 10:24:37,594 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 10:24:38,312 - aiogram.event - feed_update - INFO - Update id=874833632 is handled. Duration 720 ms by bot id=7942268445
+2024-11-12 10:24:39,013 - aiogram.event - feed_update - INFO - Update id=874833633 is handled. Duration 165 ms by bot id=7942268445
+2024-11-12 10:24:39,618 - aiogram.event - feed_update - INFO - Update id=874833634 is handled. Duration 140 ms by bot id=7942268445
+2024-11-12 10:24:45,998 - aiogram.event - feed_update - INFO - Update id=874833635 is handled. Duration 73 ms by bot id=7942268445
+2024-11-12 10:24:53,407 - aiogram.event - feed_update - INFO - Update id=874833636 is handled. Duration 73 ms by bot id=7942268445
+2024-11-12 10:24:55,511 - aiogram.event - feed_update - INFO - Update id=874833637 is handled. Duration 140 ms by bot id=7942268445
+2024-11-12 10:25:03,173 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:25:03,174 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO products (product_name, description, price, amount, is_stock, photo_id) VALUES ($1::VARCHAR, $2::VARCHAR, $3::NUMERIC(10, 2), $4::INTEGER, $5::BOOLEAN, $6::VARCHAR) RETURNING products.id
+2024-11-12 10:25:03,174 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('Игра', 'В жанре игр', Decimal('1'), 0, True, 'AgACAgIAAxkBAAIEBGcy9L9DsnJNSygr6NAH96dXSRhBAALk5TEbJo6ZSdQ2Miqes-LYAQADAgADeAADNgQ')
+2024-11-12 10:25:03,175 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:25:03,176 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 10:25:03,177 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products 
+WHERE products.product_name = $1::VARCHAR
+2024-11-12 10:25:03,177 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00009s] ('Игра',)
+2024-11-12 10:25:03,178 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE products SET amount=$1::INTEGER WHERE products.id = $2::INTEGER
+2024-11-12 10:25:03,178 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (1, 8)
+2024-11-12 10:25:03,179 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 10:25:03,280 - aiogram.event - feed_update - INFO - Update id=874833638 is handled. Duration 108 ms by bot id=7942268445
+2024-11-12 10:25:43,409 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 10:25:43,410 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 10:25:43,410 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 10:25:43,598 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 12:40:13,172 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 12:40:13,221 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 12:40:13,221 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 12:40:13,222 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 12:40:13,222 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 12:40:13,222 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 12:40:13,223 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 12:40:13,223 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 12:40:13,225 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:13,225 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00013s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:13,227 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:13,227 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001535s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:13,227 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:13,227 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001944s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:13,228 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:13,228 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002348s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:13,228 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:13,228 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002713s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:13,228 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:13,228 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003057s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:13,229 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:13,229 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003442s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:13,229 - sqlalchemy.engine.Engine - _execute_context - INFO - 
+CREATE TABLE myproducts (
+	user_id SERIAL NOT NULL, 
+	product_name VARCHAR NOT NULL, 
+	product_code VARCHAR NOT NULL, 
+	photo_id VARCHAR NOT NULL, 
+	PRIMARY KEY (user_id)
+)
+
+
+2024-11-12 12:40:13,229 - sqlalchemy.engine.Engine - _execute_context - INFO - [no key 0.00007s] ()
+2024-11-12 12:40:13,246 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 12:40:13,561 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 12:40:13,561 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 12:40:13,620 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 12:40:16,396 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 12:40:16,405 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 12:40:16,405 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00020s] (859676040,)
+2024-11-12 12:40:16,406 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 12:40:16,672 - aiogram.event - feed_update - INFO - Update id=874833639 is handled. Duration 276 ms by bot id=7942268445
+2024-11-12 12:40:22,576 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 12:40:22,576 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 12:40:22,576 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 12:40:22,665 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 12:40:54,817 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 12:40:54,866 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 12:40:54,866 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 12:40:54,867 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 12:40:54,867 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 12:40:54,867 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 12:40:54,867 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 12:40:54,868 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 12:40:54,870 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:54,870 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:54,872 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:54,872 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00157s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:54,872 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:54,872 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002013s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:54,873 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:54,873 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002401s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:54,873 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:54,873 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002797s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:54,873 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:54,873 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003161s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:54,874 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 12:40:54,874 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003586s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 12:40:54,874 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 12:40:55,228 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 12:40:55,228 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 12:40:55,289 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 12:40:58,636 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 12:40:58,644 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 12:40:58,644 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00017s] (859676040,)
+2024-11-12 12:40:58,646 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 12:40:58,916 - aiogram.event - feed_update - INFO - Update id=874833640 is handled. Duration 280 ms by bot id=7942268445
+2024-11-12 12:41:02,655 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 12:41:02,656 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT myproducts.user_id, myproducts.product_name, myproducts.product_code, myproducts.photo_id 
+FROM myproducts 
+WHERE myproducts.user_id = $1::INTEGER
+2024-11-12 12:41:02,656 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (859676040,)
+2024-11-12 12:41:02,657 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 12:41:02,845 - aiogram.event - feed_update - INFO - Update id=874833641 is handled. Duration 190 ms by bot id=7942268445
+2024-11-12 12:41:14,890 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 12:41:14,890 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 12:41:14,890 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 12:41:15,008 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 13:41:49,169 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 13:41:49,219 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 13:41:49,219 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:41:49,220 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 13:41:49,220 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:41:49,221 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 13:41:49,221 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:41:49,222 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:41:49,224 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:41:49,224 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:41:49,225 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:41:49,226 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001723s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:41:49,226 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:41:49,226 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002175s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:41:49,226 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:41:49,226 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002589s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:41:49,227 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:41:49,227 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003017s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:41:49,227 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:41:49,227 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003434s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:41:49,228 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:41:49,228 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003868s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:41:49,228 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:41:49,558 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 13:41:49,558 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 13:41:49,616 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:41:51,478 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:41:51,487 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 13:41:51,487 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00017s] ()
+2024-11-12 13:41:51,488 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:41:52,559 - aiogram.event - feed_update - INFO - Update id=874833642 is handled. Duration 1082 ms by bot id=7942268445
+2024-11-12 13:41:54,200 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:41:54,201 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:41:54,201 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (859676040,)
+2024-11-12 13:41:54,202 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:41:54,293 - aiogram.event - feed_update - INFO - Update id=874833643 is handled. Duration 95 ms by bot id=7942268445
+2024-11-12 13:41:56,569 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:41:56,570 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO shopping_cart (user_id, product_id) VALUES ($1::INTEGER, $2::INTEGER) RETURNING shopping_cart.id
+2024-11-12 13:41:56,570 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] (859676040, 8)
+2024-11-12 13:41:56,572 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:41:56,767 - aiogram.event - feed_update - INFO - Update id=874833644 is handled. Duration 198 ms by bot id=7942268445
+2024-11-12 13:41:59,916 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:41:59,916 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO shopping_cart (user_id, product_id) VALUES ($1::INTEGER, $2::INTEGER) RETURNING shopping_cart.id
+2024-11-12 13:41:59,917 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 3.347s ago] (859676040, 6)
+2024-11-12 13:41:59,917 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:42:00,165 - aiogram.event - feed_update - INFO - Update id=874833645 is handled. Duration 249 ms by bot id=7942268445
+2024-11-12 13:42:08,315 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:42:08,316 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 13:42:08,316 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (859676040,)
+2024-11-12 13:42:08,316 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:42:08,443 - aiogram.event - feed_update - INFO - Update id=874833646 is handled. Duration 128 ms by bot id=7942268445
+2024-11-12 13:42:09,278 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:42:09,279 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:42:09,279 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 15.08s ago] (859676040,)
+2024-11-12 13:42:09,279 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:42:09,695 - aiogram.event - feed_update - INFO - Update id=874833647 is handled. Duration 419 ms by bot id=7942268445
+2024-11-12 13:42:12,887 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:42:12,887 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:42:12,887 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 18.69s ago] (859676040,)
+2024-11-12 13:42:12,888 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:42:12,888 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:42:12,889 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:42:12,889 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040,)
+2024-11-12 13:42:12,891 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:42:12,986 - aiogram.event - feed_update - INFO - Update id=874833648 is handled. Duration 101 ms by bot id=7942268445
+2024-11-12 13:42:14,702 - aiogram.event - feed_update - INFO - Update id=874833649 is handled. Duration 106 ms by bot id=7942268445
+2024-11-12 13:42:16,431 - aiogram.event - feed_update - INFO - Update id=874833650 is not handled. Duration 0 ms by bot id=7942268445
+2024-11-12 13:42:16,431 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833650 by bot id=7942268445
+KeyError: 11
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 82, in moder_menu
+    admin_menu[11],
+    ~~~~~~~~~~^^^^
+KeyError: 11
+2024-11-12 13:42:18,871 - aiogram.event - feed_update - INFO - Update id=874833651 is not handled. Duration 0 ms by bot id=7942268445
+2024-11-12 13:42:18,871 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833651 by bot id=7942268445
+KeyError: 11
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 82, in moder_menu
+    admin_menu[11],
+    ~~~~~~~~~~^^^^
+KeyError: 11
+2024-11-12 13:43:17,614 - aiogram.event - feed_update - INFO - Update id=874833652 is not handled. Duration 0 ms by bot id=7942268445
+2024-11-12 13:43:17,614 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833652 by bot id=7942268445
+KeyError: 11
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 82, in moder_menu
+    admin_menu[11],
+    ~~~~~~~~~~^^^^
+KeyError: 11
+2024-11-12 13:43:20,667 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 13:43:20,667 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:43:20,667 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 13:43:20,863 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 13:43:45,702 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 13:43:45,757 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 13:43:45,757 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:43:45,758 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 13:43:45,758 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:43:45,759 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 13:43:45,759 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:43:45,759 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:43:45,762 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:43:45,762 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00013s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:43:45,764 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:43:45,764 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001853s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:43:45,764 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:43:45,764 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002315s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:43:45,765 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:43:45,765 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002716s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:43:45,765 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:43:45,765 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003116s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:43:45,766 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:43:45,766 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003495s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:43:45,766 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:43:45,766 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003912s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:43:45,766 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:43:46,146 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 13:43:46,146 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 13:43:46,214 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:43:48,245 - aiogram.event - feed_update - INFO - Update id=874833653 is not handled. Duration 0 ms by bot id=7942268445
+2024-11-12 13:43:48,245 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833653 by bot id=7942268445
+KeyError: 11
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 82, in moder_menu
+    admin_menu[11],
+    ~~~~~~~~~~^^^^
+KeyError: 11
+2024-11-12 13:43:49,594 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:43:49,603 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 13:43:49,603 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00017s] ()
+2024-11-12 13:43:49,605 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:43:50,499 - aiogram.event - feed_update - INFO - Update id=874833654 is handled. Duration 906 ms by bot id=7942268445
+2024-11-12 13:43:51,556 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:43:51,557 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:43:51,557 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (859676040,)
+2024-11-12 13:43:51,558 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:43:51,989 - aiogram.event - feed_update - INFO - Update id=874833655 is handled. Duration 435 ms by bot id=7942268445
+2024-11-12 13:43:53,766 - aiogram.event - feed_update - INFO - Update id=874833656 is handled. Duration 98 ms by bot id=7942268445
+2024-11-12 13:43:56,760 - aiogram.event - feed_update - INFO - Update id=874833657 is handled. Duration 251 ms by bot id=7942268445
+2024-11-12 13:43:57,448 - aiogram.event - feed_update - INFO - Update id=874833658 is handled. Duration 170 ms by bot id=7942268445
+2024-11-12 13:43:58,668 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:43:58,669 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT myproducts.user_id, myproducts.product_name, myproducts.product_code, myproducts.photo_id 
+FROM myproducts 
+WHERE myproducts.user_id = $1::INTEGER
+2024-11-12 13:43:58,669 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (859676040,)
+2024-11-12 13:43:58,670 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:43:58,756 - aiogram.event - feed_update - INFO - Update id=874833659 is handled. Duration 89 ms by bot id=7942268445
+2024-11-12 13:44:00,986 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:44:00,987 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:44:00,987 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] (859676040,)
+2024-11-12 13:44:00,988 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:44:01,114 - aiogram.event - feed_update - INFO - Update id=874833660 is handled. Duration 129 ms by bot id=7942268445
+2024-11-12 13:44:03,566 - aiogram.event - feed_update - INFO - Update id=874833661 is not handled. Duration 0 ms by bot id=7942268445
+2024-11-12 13:44:03,566 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833661 by bot id=7942268445
+KeyError: 11
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 82, in moder_menu
+    admin_menu[11],
+    ~~~~~~~~~~^^^^
+KeyError: 11
+2024-11-12 13:44:45,200 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 13:44:45,200 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:44:45,200 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 13:44:45,424 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 13:44:51,649 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 13:44:51,700 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 13:44:51,700 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:44:51,701 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 13:44:51,701 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:44:51,701 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 13:44:51,701 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:44:51,702 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:44:51,704 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:44:51,704 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00016s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:44:51,706 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:44:51,706 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001784s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:44:51,706 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:44:51,706 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002219s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:44:51,707 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:44:51,707 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002607s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:44:51,707 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:44:51,707 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002983s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:44:51,707 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:44:51,708 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003349s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:44:51,708 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:44:51,708 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003976s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:44:51,709 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:44:52,018 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 13:44:52,018 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 13:44:52,085 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:45:00,450 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:00,458 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 13:45:00,458 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00017s] (859676040,)
+2024-11-12 13:45:00,460 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:45:00,731 - aiogram.event - feed_update - INFO - Update id=874833662 is handled. Duration 281 ms by bot id=7942268445
+2024-11-12 13:45:01,812 - aiogram.event - feed_update - INFO - Update id=874833663 is handled. Duration 108 ms by bot id=7942268445
+2024-11-12 13:45:04,613 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:04,614 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 13:45:04,614 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 4.155s ago] (859676040,)
+2024-11-12 13:45:04,614 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:45:04,698 - aiogram.event - feed_update - INFO - Update id=874833664 is handled. Duration 85 ms by bot id=7942268445
+2024-11-12 13:45:06,208 - aiogram.event - feed_update - INFO - Update id=874833665 is handled. Duration 90 ms by bot id=7942268445
+2024-11-12 13:45:08,106 - aiogram.event - feed_update - INFO - Update id=874833666 is handled. Duration 74 ms by bot id=7942268445
+2024-11-12 13:45:09,342 - aiogram.event - feed_update - INFO - Update id=874833667 is handled. Duration 169 ms by bot id=7942268445
+2024-11-12 13:45:16,411 - aiogram.event - feed_update - INFO - Update id=874833668 is handled. Duration 112 ms by bot id=7942268445
+2024-11-12 13:45:20,916 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:20,917 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:45:20,917 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040,)
+2024-11-12 13:45:20,919 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE balances SET quantity=$1::NUMERIC(10, 2) WHERE balances.user_id = $2::INTEGER
+2024-11-12 13:45:20,919 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (Decimal('10.00'), 859676040)
+2024-11-12 13:45:20,919 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:45:21,120 - aiogram.event - feed_update - INFO - Update id=874833669 is handled. Duration 205 ms by bot id=7942268445
+2024-11-12 13:45:22,763 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:22,763 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 13:45:22,763 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 22.31s ago] (859676040,)
+2024-11-12 13:45:22,764 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:45:22,841 - aiogram.event - feed_update - INFO - Update id=874833670 is handled. Duration 77 ms by bot id=7942268445
+2024-11-12 13:45:23,974 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:23,976 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:45:23,976 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] (859676040,)
+2024-11-12 13:45:23,977 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:45:24,283 - aiogram.event - feed_update - INFO - Update id=874833671 is handled. Duration 310 ms by bot id=7942268445
+2024-11-12 13:45:25,205 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:25,205 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:45:25,205 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 1.229s ago] (859676040,)
+2024-11-12 13:45:25,206 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:45:25,206 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:25,206 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:45:25,206 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 4.289s ago] (859676040,)
+2024-11-12 13:45:25,207 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:45:25,207 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:25,208 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO myproducts (user_id, product_name, product_code, photo_id) VALUES ($1::INTEGER, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR)
+2024-11-12 13:45:25,208 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040, 'Rust', 'CYY4-gX3N-fRuI-stGd', 'AgACAgIAAxkBAAIDymcy89-hGVTKOTDsvxFYUa4QJcOfAALa5TEbJo6ZSebHjfnlaEW9AQADAgADeAADNgQ')
+2024-11-12 13:45:25,209 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:45:25,210 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:45:25,210 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO myproducts (user_id, product_name, product_code, photo_id) VALUES ($1::INTEGER, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR)
+2024-11-12 13:45:25,210 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002332s ago] (859676040, 'Игра', '9k0E-xlGL-qp8J-PQZf', 'AgACAgIAAxkBAAIEBGcy9L9DsnJNSygr6NAH96dXSRhBAALk5TEbJo6ZSdQ2Miqes-LYAQADAgADeAADNgQ')
+2024-11-12 13:45:25,212 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:45:25,212 - aiogram.event - feed_update - INFO - Update id=874833672 is not handled. Duration 9 ms by bot id=7942268445
+2024-11-12 13:45:25,212 - aiogram.event - _process_update - ERROR - Cause exception while process update id=874833672 by bot id=7942268445
+IntegrityError: (sqlalchemy.dialects.postgresql.asyncpg.IntegrityError) <class 'asyncpg.exceptions.UniqueViolationError'>: duplicate key value violates unique constraint "myproducts_pkey"
+DETAIL:  Key (user_id)=(859676040) already exists.
+[SQL: INSERT INTO myproducts (user_id, product_name, product_code, photo_id) VALUES ($1::INTEGER, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR)]
+[parameters: (859676040, 'Игра', '9k0E-xlGL-qp8J-PQZf', 'AgACAgIAAxkBAAIEBGcy9L9DsnJNSygr6NAH96dXSRhBAALk5TEbJo6ZSdQ2Miqes-LYAQADAgADeAADNgQ')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 534, in _prepare_and_execute
+    self._rows = deque(await prepared_stmt.fetch(*parameters))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/asyncpg/prepared_stmt.py", line 176, in fetch
+    data = await self.__bind_execute(args, 0, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/asyncpg/prepared_stmt.py", line 267, in __bind_execute
+    data, status, _ = await self.__do_execute(
+                      ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/asyncpg/prepared_stmt.py", line 256, in __do_execute
+    return await executor(protocol)
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "asyncpg/protocol/protocol.pyx", line 206, in bind_execute
+asyncpg.exceptions.UniqueViolationError: duplicate key value violates unique constraint "myproducts_pkey"
+DETAIL:  Key (user_id)=(859676040) already exists.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.dialects.postgresql.asyncpg.AsyncAdapt_asyncpg_dbapi.IntegrityError: <class 'asyncpg.exceptions.UniqueViolationError'>: duplicate key value violates unique constraint "myproducts_pkey"
+DETAIL:  Key (user_id)=(859676040) already exists.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/core/handlers/handler.py", line 459, in balance_payment
+    await add_product_to_users_collection_tools(
+  File "/home/turra7/Рабочий стол/BotShop/core/database/dataTools.py", line 383, in add_product_to_users_collection_tools
+    await session.commit()
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/ext/asyncio/session.py", line 1009, in commit
+    await greenlet_spawn(self.sync_session.commit)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 203, in greenlet_spawn
+    result = context.switch(value)
+             ^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 2028, in commit
+    trans.commit(_to_root=True)
+  File "<string>", line 2, in commit
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1313, in commit
+    self._prepare_impl()
+  File "<string>", line 2, in _prepare_impl
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/state_changes.py", line 139, in _go
+    ret_value = fn(self, *arg, **kw)
+                ^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 1288, in _prepare_impl
+    self.session.flush()
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4352, in flush
+    self._flush(objects)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4487, in _flush
+    with util.safe_reraise():
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/langhelpers.py", line 146, in __exit__
+    raise exc_value.with_traceback(exc_tb)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/session.py", line 4448, in _flush
+    flush_context.execute()
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 466, in execute
+    rec.execute(self)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/unitofwork.py", line 642, in execute
+    util.preloaded.orm_persistence.save_obj(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 93, in save_obj
+    _emit_insert_statements(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/orm/persistence.py", line 1048, in _emit_insert_statements
+    result = connection.execute(
+             ^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1418, in execute
+    return meth(
+           ^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/sql/elements.py", line 515, in _execute_on_connection
+    return connection._execute_clauseelement(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1640, in _execute_clauseelement
+    ret = self._execute_context(
+          ^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1846, in _execute_context
+    return self._exec_single_context(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1986, in _exec_single_context
+    self._handle_dbapi_exception(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 2355, in _handle_dbapi_exception
+    raise sqlalchemy_exception.with_traceback(exc_info[2]) from e
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/base.py", line 1967, in _exec_single_context
+    self.dialect.do_execute(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/engine/default.py", line 941, in do_execute
+    cursor.execute(statement, parameters)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 568, in execute
+    self._adapt_connection.await_(
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 132, in await_only
+    return current.parent.switch(awaitable)  # type: ignore[no-any-return,attr-defined] # noqa: E501
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/util/_concurrency_py3k.py", line 196, in greenlet_spawn
+    value = await result
+            ^^^^^^^^^^^^
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 546, in _prepare_and_execute
+    self._handle_exception(error)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 497, in _handle_exception
+    self._adapt_connection._handle_exception(error)
+  File "/home/turra7/Рабочий стол/BotShop/venv/lib/python3.12/site-packages/sqlalchemy/dialects/postgresql/asyncpg.py", line 780, in _handle_exception
+    raise translated_error from error
+sqlalchemy.exc.IntegrityError: (sqlalchemy.dialects.postgresql.asyncpg.IntegrityError) <class 'asyncpg.exceptions.UniqueViolationError'>: duplicate key value violates unique constraint "myproducts_pkey"
+DETAIL:  Key (user_id)=(859676040) already exists.
+[SQL: INSERT INTO myproducts (user_id, product_name, product_code, photo_id) VALUES ($1::INTEGER, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR)]
+[parameters: (859676040, 'Игра', '9k0E-xlGL-qp8J-PQZf', 'AgACAgIAAxkBAAIEBGcy9L9DsnJNSygr6NAH96dXSRhBAALk5TEbJo6ZSdQ2Miqes-LYAQADAgADeAADNgQ')]
+(Background on this error at: https://sqlalche.me/e/20/gkpj)
+2024-11-12 13:51:50,530 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 13:51:50,582 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 13:51:50,582 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:51:50,583 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 13:51:50,584 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:51:50,584 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 13:51:50,584 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:51:50,585 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:51:50,588 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:51:50,588 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:51:50,590 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:51:50,590 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001891s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:51:50,590 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:51:50,591 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002326s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:51:50,591 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:51:50,591 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002779s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:51:50,591 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:51:50,592 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003264s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:51:50,592 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:51:50,592 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003709s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:51:50,592 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:51:50,592 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.004129s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:51:50,593 - sqlalchemy.engine.Engine - _execute_context - INFO - 
+CREATE TABLE myproducts (
+	id SERIAL NOT NULL, 
+	user_id INTEGER, 
+	product_name VARCHAR NOT NULL, 
+	product_code VARCHAR NOT NULL, 
+	photo_id VARCHAR NOT NULL, 
+	PRIMARY KEY (id)
+)
+
+
+2024-11-12 13:51:50,593 - sqlalchemy.engine.Engine - _execute_context - INFO - [no key 0.00008s] ()
+2024-11-12 13:51:50,600 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:51:51,000 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 13:51:51,000 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 13:51:51,082 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:51:55,985 - aiogram.event - feed_update - INFO - Update id=874833673 is handled. Duration 314 ms by bot id=7942268445
+2024-11-12 13:51:56,709 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:51:56,718 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:51:56,718 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00023s] (859676040,)
+2024-11-12 13:51:56,719 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:51:56,829 - aiogram.event - feed_update - INFO - Update id=874833674 is handled. Duration 120 ms by bot id=7942268445
+2024-11-12 13:51:58,832 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:51:58,834 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:51:58,834 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00012s] (859676040,)
+2024-11-12 13:51:58,835 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:51:59,140 - aiogram.event - feed_update - INFO - Update id=874833675 is handled. Duration 309 ms by bot id=7942268445
+2024-11-12 13:52:00,108 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:52:00,108 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:52:00,108 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 1.274s ago] (859676040,)
+2024-11-12 13:52:00,109 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:52:00,109 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:52:00,109 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:52:00,109 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 3.392s ago] (859676040,)
+2024-11-12 13:52:00,110 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:52:00,110 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:52:00,111 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO myproducts (user_id, product_name, product_code, photo_id) VALUES ($1::INTEGER, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR) RETURNING myproducts.id
+2024-11-12 13:52:00,111 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040, 'Rust', 'tay6-tZXY-WhgB-vYJQ', 'AgACAgIAAxkBAAIDymcy89-hGVTKOTDsvxFYUa4QJcOfAALa5TEbJo6ZSebHjfnlaEW9AQADAgADeAADNgQ')
+2024-11-12 13:52:00,112 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:52:00,113 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:52:00,113 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO myproducts (user_id, product_name, product_code, photo_id) VALUES ($1::INTEGER, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR) RETURNING myproducts.id
+2024-11-12 13:52:00,113 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.0023s ago] (859676040, 'Игра', 'Eqgv-0CgR-TYah-scZQ', 'AgACAgIAAxkBAAIEBGcy9L9DsnJNSygr6NAH96dXSRhBAALk5TEbJo6ZSdQ2Miqes-LYAQADAgADeAADNgQ')
+2024-11-12 13:52:00,114 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:52:00,115 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:52:00,115 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT shopping_cart.id, shopping_cart.user_id, shopping_cart.product_id 
+FROM shopping_cart 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:52:00,115 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00009s] (859676040,)
+2024-11-12 13:52:00,116 - core.database.dataTools - empty_the_basket - DEBUG - Ошибка очистки корзины!
+2024-11-12 13:52:00,116 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:52:00,275 - aiogram.event - feed_update - INFO - Update id=874833676 is handled. Duration 168 ms by bot id=7942268445
+2024-11-12 13:52:03,094 - aiogram.event - feed_update - INFO - Update id=874833677 is handled. Duration 133 ms by bot id=7942268445
+2024-11-12 13:52:04,191 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:52:04,191 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT myproducts.id, myproducts.user_id, myproducts.product_name, myproducts.product_code, myproducts.photo_id 
+FROM myproducts 
+WHERE myproducts.user_id = $1::INTEGER
+2024-11-12 13:52:04,191 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (859676040,)
+2024-11-12 13:52:04,192 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:52:04,384 - aiogram.event - feed_update - INFO - Update id=874833678 is handled. Duration 195 ms by bot id=7942268445
+2024-11-12 13:52:08,395 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:52:08,395 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:52:08,395 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 9.561s ago] (859676040,)
+2024-11-12 13:52:08,396 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:52:08,679 - aiogram.event - feed_update - INFO - Update id=874833679 is handled. Duration 285 ms by bot id=7942268445
+2024-11-12 13:53:02,642 - aiogram.event - feed_update - INFO - Update id=874833680 is handled. Duration 289 ms by bot id=7942268445
+2024-11-12 13:53:03,537 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:53:03,537 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:53:03,537 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 66.82s ago] (859676040,)
+2024-11-12 13:53:03,538 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:53:03,671 - aiogram.event - feed_update - INFO - Update id=874833681 is handled. Duration 134 ms by bot id=7942268445
+2024-11-12 13:55:29,546 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 13:55:29,546 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:55:29,546 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 13:55:29,771 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 13:57:01,683 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 13:57:01,732 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 13:57:01,732 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:57:01,733 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 13:57:01,733 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:57:01,734 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 13:57:01,734 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:57:01,734 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:01,737 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:01,737 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:01,738 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:01,738 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001604s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:01,738 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:01,738 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001993s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:01,739 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:01,739 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002376s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:01,739 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:01,739 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002759s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:01,740 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:01,740 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003174s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:01,740 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:01,740 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00362s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:01,740 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:57:02,126 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 13:57:02,126 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 13:57:02,199 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:57:03,713 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:03,723 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-12 13:57:03,723 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] (859676040,)
+2024-11-12 13:57:03,724 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:03,950 - aiogram.event - feed_update - INFO - Update id=874833682 is handled. Duration 237 ms by bot id=7942268445
+2024-11-12 13:57:05,598 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:05,599 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:57:05,599 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00013s] (859676040,)
+2024-11-12 13:57:05,600 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:05,872 - aiogram.event - feed_update - INFO - Update id=874833683 is handled. Duration 276 ms by bot id=7942268445
+2024-11-12 13:57:07,487 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:07,488 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:57:07,488 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 1.889s ago] (859676040,)
+2024-11-12 13:57:07,488 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:07,489 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:07,489 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:57:07,489 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040,)
+2024-11-12 13:57:07,490 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:07,491 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:07,493 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO myproducts (user_id, product_name, product_code, photo_id) VALUES ($1::INTEGER, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR) RETURNING myproducts.id
+2024-11-12 13:57:07,494 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00015s] (859676040, 'Rust', 'bJoK-jx0V-YClj-yqVO', 'AgACAgIAAxkBAAIDymcy89-hGVTKOTDsvxFYUa4QJcOfAALa5TEbJo6ZSebHjfnlaEW9AQADAgADeAADNgQ')
+2024-11-12 13:57:07,495 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:57:07,496 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:07,496 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO myproducts (user_id, product_name, product_code, photo_id) VALUES ($1::INTEGER, $2::VARCHAR, $3::VARCHAR, $4::VARCHAR) RETURNING myproducts.id
+2024-11-12 13:57:07,496 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002462s ago] (859676040, 'Игра', 'viD3-FASC-QyDP-ARHD', 'AgACAgIAAxkBAAIEBGcy9L9DsnJNSygr6NAH96dXSRhBAALk5TEbJo6ZSdQ2Miqes-LYAQADAgADeAADNgQ')
+2024-11-12 13:57:07,496 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:57:07,497 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:07,498 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT shopping_cart.id, shopping_cart.user_id, shopping_cart.product_id 
+FROM shopping_cart 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:57:07,498 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040,)
+2024-11-12 13:57:07,499 - sqlalchemy.engine.Engine - _execute_context - INFO - DELETE FROM shopping_cart WHERE shopping_cart.id = $1::INTEGER
+2024-11-12 13:57:07,500 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] [(2,), (3,)]
+2024-11-12 13:57:07,500 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:57:07,501 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:07,501 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:57:07,501 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.0118s ago] (859676040,)
+2024-11-12 13:57:07,502 - sqlalchemy.engine.Engine - _execute_context - INFO - UPDATE balances SET quantity=$1::NUMERIC(10, 2) WHERE balances.user_id = $2::INTEGER
+2024-11-12 13:57:07,502 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (Decimal('4.00'), 859676040)
+2024-11-12 13:57:07,503 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:57:07,604 - aiogram.event - feed_update - INFO - Update id=874833684 is handled. Duration 117 ms by bot id=7942268445
+2024-11-12 13:57:09,194 - aiogram.event - feed_update - INFO - Update id=874833685 is handled. Duration 91 ms by bot id=7942268445
+2024-11-12 13:57:09,794 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:09,794 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:57:09,794 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 2.305s ago] (859676040,)
+2024-11-12 13:57:09,795 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:09,893 - aiogram.event - feed_update - INFO - Update id=874833686 is handled. Duration 99 ms by bot id=7942268445
+2024-11-12 13:57:12,026 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:12,027 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT myproducts.id, myproducts.user_id, myproducts.product_name, myproducts.product_code, myproducts.photo_id 
+FROM myproducts 
+WHERE myproducts.user_id = $1::INTEGER
+2024-11-12 13:57:12,027 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040,)
+2024-11-12 13:57:12,028 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:12,467 - aiogram.event - feed_update - INFO - Update id=874833687 is handled. Duration 442 ms by bot id=7942268445
+2024-11-12 13:57:20,727 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 13:57:20,727 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:57:20,727 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 13:57:20,885 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
+2024-11-12 13:57:26,393 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-12 13:57:26,442 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-12 13:57:26,442 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:57:26,443 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-12 13:57:26,443 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:57:26,444 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-12 13:57:26,444 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-12 13:57:26,444 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:26,448 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:26,448 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00013s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:26,449 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:26,449 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00163s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:26,449 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:26,449 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002045s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:26,450 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:26,450 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00243s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:26,450 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:26,450 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002831s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:26,451 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:26,451 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003202s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:26,451 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-12 13:57:26,451 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.00358s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-12 13:57:26,451 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:57:27,010 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-12 13:57:27,010 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-12 13:57:27,079 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:57:28,182 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:28,191 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:57:28,191 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00023s] (859676040,)
+2024-11-12 13:57:28,196 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:28,387 - aiogram.event - feed_update - INFO - Update id=874833688 is handled. Duration 207 ms by bot id=7942268445
+2024-11-12 13:57:30,758 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:30,759 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products
+2024-11-12 13:57:30,759 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] ()
+2024-11-12 13:57:30,759 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:31,274 - aiogram.event - feed_update - INFO - Update id=874833689 is handled. Duration 517 ms by bot id=7942268445
+2024-11-12 13:57:35,539 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:35,540 - sqlalchemy.engine.Engine - _execute_context - INFO - INSERT INTO shopping_cart (user_id, product_id) VALUES ($1::INTEGER, $2::INTEGER) RETURNING shopping_cart.id
+2024-11-12 13:57:35,541 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00011s] (859676040, 6)
+2024-11-12 13:57:35,542 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-12 13:57:35,717 - aiogram.event - feed_update - INFO - Update id=874833690 is handled. Duration 177 ms by bot id=7942268445
+2024-11-12 13:57:37,229 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:37,229 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:57:37,229 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 9.038s ago] (859676040,)
+2024-11-12 13:57:37,230 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:37,489 - aiogram.event - feed_update - INFO - Update id=874833691 is handled. Duration 262 ms by bot id=7942268445
+2024-11-12 13:57:38,768 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:38,769 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT products.id, products.product_name, products.description, products.price, products.amount, products.is_stock, products.photo_id 
+FROM products JOIN shopping_cart ON products.id = shopping_cart.product_id 
+WHERE shopping_cart.user_id = $1::INTEGER
+2024-11-12 13:57:38,769 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 10.58s ago] (859676040,)
+2024-11-12 13:57:38,769 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:38,770 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-12 13:57:38,770 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-12 13:57:38,770 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040,)
+2024-11-12 13:57:38,771 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-12 13:57:38,862 - aiogram.event - feed_update - INFO - Update id=874833692 is handled. Duration 95 ms by bot id=7942268445
+2024-11-12 13:57:40,676 - aiogram.event - feed_update - INFO - Update id=874833693 is handled. Duration 86 ms by bot id=7942268445
+2024-11-12 13:57:51,888 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-12 13:57:51,888 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-12 13:57:51,888 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-12 13:57:51,967 - core.handlers.handler - stop_bot - INFO - Бот остановлен!

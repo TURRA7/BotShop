@@ -20,7 +20,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
-# Основные параметры
+# Основные параметры подключения бота
 TOKEN = os.environ.get("TOKEN")
 ADMIN_ID = os.environ.get("ADMIN_ID")
 
@@ -29,3 +29,8 @@ PG_USER = os.environ.get("PG_USER")
 PG_PASS = os.environ.get("PG_PASS")
 PG_HOST = os.environ.get("PG_HOST")
 PG_NAME = os.environ.get("PG_NAME")
+
+# Подключение платежной системы
+YOOKASSA_SECRET_KEY = os.environ.get("YOOKASSA_SECRET_KEY")
+YOOKASSA_ACCIUNT_ID = os.environ.get("YOOKASSA_ACCIUNT_ID")
+YOOKASSA_TOKEN = os.environ.get("YOOKASSA_TOKEN")

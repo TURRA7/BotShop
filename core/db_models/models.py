@@ -187,3 +187,21 @@ class Balance(Base):
     quantity = Column(DECIMAL(10, 2), default=0.0)
 
     user = relationship('User', back_populates='balance')
+
+
+class UserProduct(Base):
+    """
+    Купленные товары пользователя.
+
+    Args:
+        user_id: ID Пользователя
+        product_name: Название товара
+        product_code: Сам товар(цифровой код)
+    """
+    __tablename__ = "myproducts"
+
+    id = Column(Integer, primary_key=True)
+    user_id = Column(Integer)
+    product_name = Column(String, nullable=False)
+    product_code = Column(String, nullable=False)
+    photo_id = Column(String, nullable=False)

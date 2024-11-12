@@ -6,7 +6,7 @@ from sqlalchemy import select
 
 from core.db_models.models import (async_session, engine,
                                    Base, User, Product, Balance,
-                                   ShoppingCart)
+                                   ShoppingCart, UserProduct)
 from core.tools.tool import generate_code
 
 
@@ -188,7 +188,7 @@ async def get_referal_code(user_id: int) -> str | int:
 
 async def top_up_admin(user_id: int, amount: float) -> str:
     """
-    Ручное пополнение баланса пользователя.
+    Пополнение баланса пользователя.
 
     Args:
 
@@ -211,7 +211,7 @@ async def top_up_admin(user_id: int, amount: float) -> str:
 
 async def write_off_admin(user_id: int, amount: float) -> str:
     """
-    Ручное списание средств с баланса пользователя.
+    Списание средств с баланса пользователя.
 
     Args:
 
@@ -354,3 +354,74 @@ async def item_un_cart(user_id: int, product_id: int) -> str:
         else:
             logger.debug("Ошибка удаления товара из корзины!")
             return "Ошибка удаления товара из корзины!"
+
+
+async def add_product_to_users_collection_tools(user_id: int,
+                                                product_name: str,
+                                                product_code: str,
+                                                photo_id: str) -> str:
+    """
+    Добавление купленного товара в его личную коллекцию.
+
+    Args:
+        user_id: ID пользователя
+        product_name: Название продукта
+        product_code: Цифровой код продукта
+        photo_id: ID Изображения продукта в телеграмме
+    """
+    async with get_session() as session:
+        item = UserProduct(user_id=user_id,
+                           product_name=product_name,
+                           product_code=product_code,
+                           photo_id=photo_id)
+        if (
+            isinstance(item, UserProduct) and
+            item.user_id and item.product_name and
+            item.product_code and item.photo_id
+        ):
+            session.add(item)
+            await session.commit()
+            return "Продукт добавлен в коллекцию пользователя!"
+        else:
+            logger.debug(
+                "Ошибка добалвения в коллекцию пользователя!")
+            return "Ошибка добалвения в коллекцию пользователя!"
+
+
+async def get_user_collection_tools(user_id: int) -> UserProduct:
+    """
+    Получение товаров из личной коллекции пользвателя.
+
+    Args:
+        user_id: ID Пользователя
+    """
+    async with get_session() as session:
+        result = await session.execute(
+            select(UserProduct).where(UserProduct.user_id == user_id))
+        product = result.scalars().all()
+        return product
+
+
+async def empty_the_basket(user_id: int) -> str:
+    """
+    Очистка корзины.
+
+    Args:
+        user_id: ID пользователя
+
+    Returns:
+        Очищает корзину пользователя, возвращает
+        строку с оповещением об статусе операции
+    """
+    async with get_session() as session:
+        result = await session.execute(
+            select(ShoppingCart).where(ShoppingCart.user_id == user_id))
+        items = result.scalars().all()
+        if items:
+            for item in items:
+                await session.delete(item)
+            await session.commit()
+            return "Корзина очищенна!"
+        else:
+            logger.debug("Ошибка очистки корзины!")
+            return "Ошибка очистки корзины!"

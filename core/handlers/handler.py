@@ -14,7 +14,9 @@ from core.database.dataTools import (get_all_products, get_user, add_user,
                                      get_balance, get_referal_code,
                                      top_up_admin, write_off_admin,
                                      delete_item, add_to_cart, get_user_cart,
-                                     item_un_cart)
+                                     item_un_cart, get_user_collection_tools,
+                                     add_product_to_users_collection_tools,
+                                     empty_the_basket)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
@@ -56,7 +58,7 @@ async def get_start(message: Message) -> None:
                                                               user_menu[1],
                                                               user_menu[2],
                                                               user_menu[3],
-                                                              user_menu[4],
+                                                              user_menu[11],
                                                               user_menu[5],
                                                               user_menu[9]))
     else:
@@ -65,7 +67,7 @@ async def get_start(message: Message) -> None:
             reply_markup=ReplyKeyBoards.create_keyboard_reply(user_menu[1],
                                                               user_menu[2],
                                                               user_menu[3],
-                                                              user_menu[4],
+                                                              user_menu[11],
                                                               user_menu[5],
                                                               user_menu[9]))
 
@@ -95,9 +97,9 @@ async def backward(message: Message) -> None:
                 user_menu[1],
                 user_menu[2],
                 user_menu[3],
-                user_menu[4],
+                user_menu[11],
                 user_menu[5],
-                user_menu[9]))
+                user_menu[9],))
     else:
         await message.answer(
             text="Вы в меню!",
@@ -105,7 +107,7 @@ async def backward(message: Message) -> None:
                 user_menu[1],
                 user_menu[2],
                 user_menu[3],
-                user_menu[4],
+                user_menu[11],
                 user_menu[5],
                 user_menu[9]))
 
@@ -339,10 +341,9 @@ async def catalog(message: Message) -> None:
     if products:
         for item in products:
             text = (
-                f"id: {item['id']}\n"
                 f"Название: {item['name']}\n"
                 f"Описание: {item['description']}\n"
-                f"Цена: {item['price']} рублей."
+                f"Цена: {item['price']} руб."
             )
             if user_id == admin_id:
                 buttons = [
@@ -409,6 +410,7 @@ async def get_cart(message: Message) -> None:
         await message.answer(text="Выберите действие...",
                              reply_markup=ReplyKeyBoards.create_keyboard_reply(
                                  user_menu[10],
+                                 user_menu[12],
                                  admin_menu[8]
                                  ))
     else:
@@ -423,3 +425,51 @@ async def un_cart(callback: CallbackQuery) -> None:
     result = await item_un_cart(user_id=user_id,
                                 product_id=int(product_id))
     await callback.message.edit_caption(caption=result)
+
+
+@router.message(F.text == user_menu[11])
+async def get_user_collection(message: Message) -> None:
+    """Получение пользователем его купленных товаров."""
+    user_id = message.from_user.id
+    products = await get_user_collection_tools(user_id=user_id)
+    if products:
+        for item in products:
+            text = (
+                f"Название: {item.product_name}\n"
+                f"Цийровой код: {item.product_code}"
+            )
+            await message.answer_photo(
+                photo=item.photo_id,
+                caption=text)
+    else:
+        await message.answer("Вы ещё не купили товары (((")
+
+
+@router.message(F.text == user_menu[10])
+async def balance_payment(message: Message) -> None:
+    """Оплата через баланс."""
+    user_id = message.from_user.id
+    cart_products = await get_user_cart(user_id=user_id)
+    user_balance = await get_balance(user_id=user_id)
+    amount = 0
+    for item in cart_products:
+        amount += item.price
+    if float(user_balance) >= float(amount):
+        for item in cart_products:
+            await add_product_to_users_collection_tools(
+                user_id=user_id,
+                product_name=item.product_name,
+                product_code=await generate_gift(),
+                photo_id=item.photo_id)
+        await empty_the_basket(user_id=user_id)
+        await write_off_admin(user_id=user_id, amount=amount)
+        await message.answer(
+            "Успешно, товары вы найдете в разделе 'МОИ ТОВАРЫ'.")
+    else:
+        await message.answer("На баалнсе недостаточно средств...")
+
+
+@router.message(F.text == user_menu[12])
+async def card_payment(message: Message) -> None:
+    """Оплата картой."""
+    await message.answer("Функция ещё не реализованна!")
