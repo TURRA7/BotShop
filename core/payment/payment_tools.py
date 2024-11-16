@@ -48,7 +48,7 @@ async def create_payment(amount: float,
     return payment.confirmation.confirmation_url, payment.id
 
 
-async def check_payment(payment_id) -> dict | bool:
+async def check_payment(payment_id: int) -> dict | bool:
     """
     Проверка платежа в yookassa.
 
@@ -65,3 +65,17 @@ async def check_payment(payment_id) -> dict | bool:
         return payment.metadata
     else:
         return False
+
+
+async def get_amount_payment(payment_id: int) -> float:
+    """
+    Получение суммы из платежа yookassa.
+
+    Args:
+        payment_id: ID платежа в системе yookassa
+
+    Returns:
+        Проверяет сумму из платежа yookassa.
+    """
+    payment = yookassa.Payment.find_one(payment_id=payment_id)
+    return payment.amount.value

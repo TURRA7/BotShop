@@ -5,6 +5,7 @@ Classes:
     Product_add: Добавление продукта
     TopUpAdmin: Ручное пополнение баланса пользователя
     WriteOffAdmin: Ручное списание средств с баланса пользователя
+    TopUP: Пополнение баланса пользователя
 """
 from aiogram.fsm.state import State, StatesGroup
 
@@ -23,4 +24,8 @@ class TopUpAdmin(StatesGroup):
 
 class WriteOffAdmin(StatesGroup):
     user_id = State()
+    amount = State()
+
+
+class TopUpUser(StatesGroup):
     amount = State()

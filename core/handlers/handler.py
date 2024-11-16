@@ -17,12 +17,15 @@ from core.database.dataTools import (get_all_products, get_user, add_user,
                                      item_un_cart, get_user_collection_tools,
                                      add_product_to_users_collection_tools,
                                      empty_the_basket)
-from core.payment.payment_tools import check_payment, create_payment
+from core.payment.payment_tools import (check_payment,
+                                        create_payment,
+                                        get_amount_payment)
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
 from core.keyboards.reply_inline import ReplyKeyBoards, InlineKeyBoards
-from core.state_models.state import Product_add, TopUpAdmin, WriteOffAdmin
+from core.state_models.state import (Product_add, TopUpAdmin,
+                                     WriteOffAdmin, TopUpUser)
 from core.tools.tool import generate_gift
 
 
@@ -218,12 +221,66 @@ async def get_user_balance(message: Message) -> None:
     balance = await get_balance(user_id=user_id)
     await message.answer(
         text=f"Ваш баланс: {str(balance)} р.",
-        reply_markup=ReplyKeyBoards.create_keyboard_reply(user_menu[13]))
+        reply_markup=ReplyKeyBoards.create_keyboard_reply(user_menu[13],
+                                                          admin_menu[8]))
 
 
 @router.message(F.text == user_menu[13])
-async def top_up_user(message: Message) -> None:
-    ...
+async def top_up_user_one(message: Message,
+                          state: FSMContext) -> None:
+    """Пополнение баланса пользователя - ввод суммы."""
+    await state.set_state(TopUpUser.amount)
+    await message.answer(fsm_product[8])
+
+
+@router.message(TopUpUser.amount)
+async def top_up_user_two(message: Message,
+                          state: FSMContext) -> None:
+    """Пополнение баланса пользователя - формирование транзакции."""
+    await state.update_data(amount=message.text)
+    user_id = message.chat.id
+    user_amount = message.text
+    try:
+        value = Decimal(user_amount)
+    except (ValueError, InvalidOperation):
+        await message.answer(fsm_product[14])
+        return
+    await state.update_data(amount=value)
+    data: dict = await state.get_data()
+
+    pyment_url, payment_id = await create_payment(data['amount'], user_id,
+                                                  "Пополнение баланса...")
+
+    builder = InlineKeyboardBuilder()
+    builder.add(types.InlineKeyboardButton(
+        text="Оплатить",
+        url=pyment_url
+    ))
+    builder.add(types.InlineKeyboardButton(
+        text="Проверить оплату",
+        callback_data=f"check_{payment_id}"
+    ))
+    await message.answer("Счёт сформирован...",
+                         reply_markup=builder.as_markup())
+    await state.clear()
+
+
+@router.callback_query(lambda c: 'check' in c.data)
+async def top_up_user_three(callback: types.CallbackQuery) -> None:
+    payment_id = callback.data.split("_")[-1]
+    user_id = callback.message.chat.id
+    result = await check_payment(payment_id)
+    if result:
+        amount = await get_amount_payment(payment_id=payment_id)
+        user = await top_up_admin(user_id=user_id, amount=amount)
+        await callback.message.answer(
+            text=user,
+            reply_markup=ReplyKeyBoards.create_keyboard_reply(
+                user_menu[13],
+                admin_menu[8]))
+    else:
+        await callback.message.answer(
+            "Оплата ещё не прошла или возникла ошибка!")
 
 
 @router.message(F.text == user_menu[4])
@@ -288,6 +345,7 @@ async def top_up_user_id(message: Message, state: FSMContext) -> None:
 @router.message(TopUpAdmin.amount, F.from_user.id == admin_id)
 async def top_up_amount(message: Message, state: FSMContext) -> None:
     """Ручное пополнение баланса (FSM). Пополнение баланса."""
+    user_id = message.chat.id
     user_amount = message.text
     try:
         value = Decimal(user_amount)
@@ -297,7 +355,7 @@ async def top_up_amount(message: Message, state: FSMContext) -> None:
 
     await state.update_data(amount=value)
     data: dict = await state.get_data()
-    result = await top_up_admin(user_id=data['user_id'],
+    result = await top_up_admin(user_id=user_id,
                                 amount=data['amount'])
     await message.answer(text=result)
     await state.clear()
