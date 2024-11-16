@@ -216,7 +216,14 @@ async def get_user_balance(message: Message) -> None:
     """Получение баланса пользователя."""
     user_id = message.from_user.id
     balance = await get_balance(user_id=user_id)
-    await message.answer(f"Ваш баланс: {str(balance)} р.")
+    await message.answer(
+        text=f"Ваш баланс: {str(balance)} р.",
+        reply_markup=ReplyKeyBoards.create_keyboard_reply(user_menu[13]))
+
+
+@router.message(F.text == user_menu[13])
+async def top_up_user(message: Message) -> None:
+    ...
 
 
 @router.message(F.text == user_menu[4])
@@ -472,7 +479,7 @@ async def balance_payment(message: Message) -> None:
 
 @router.message(F.text == user_menu[12])
 async def card_payment(message: Message) -> None:
-    """Оплата картой."""
+    """Оплата картой - формирование платежа."""
     user_id = message.chat.id
     cart_products = await get_user_cart(user_id=user_id)
     amount = 0
@@ -497,6 +504,7 @@ async def card_payment(message: Message) -> None:
 
 @router.callback_query(lambda c: 'check' in c.data)
 async def check_card_payment(callback: types.CallbackQuery) -> None:
+    """Оплата картой - обработка платежа, проверка статуса платежа."""
     user_id = callback.message.chat.id
     result = await check_payment(callback.data.split("_")[-1])
     if result:

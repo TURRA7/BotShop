@@ -1,0 +1,58 @@
+2024-11-16 12:22:27,144 - asyncio - __init__ - DEBUG - Using selector: EpollSelector
+2024-11-16 12:22:27,192 - sqlalchemy.engine.Engine - _execute_context - INFO - select pg_catalog.version()
+2024-11-16 12:22:27,192 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-16 12:22:27,193 - sqlalchemy.engine.Engine - _execute_context - INFO - select current_schema()
+2024-11-16 12:22:27,194 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-16 12:22:27,194 - sqlalchemy.engine.Engine - _execute_context - INFO - show standard_conforming_strings
+2024-11-16 12:22:27,194 - sqlalchemy.engine.Engine - _execute_context - INFO - [raw sql] ()
+2024-11-16 12:22:27,195 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-16 12:22:27,198 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-16 12:22:27,198 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00014s] ('users', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-16 12:22:27,199 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-16 12:22:27,199 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.001754s ago] ('products', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-16 12:22:27,200 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-16 12:22:27,200 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002159s ago] ('shopping_cart', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-16 12:22:27,200 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-16 12:22:27,200 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.002588s ago] ('orders', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-16 12:22:27,200 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-16 12:22:27,201 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003041s ago] ('order_items', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-16 12:22:27,201 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-16 12:22:27,201 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003508s ago] ('balances', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-16 12:22:27,201 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT pg_catalog.pg_class.relname 
+FROM pg_catalog.pg_class JOIN pg_catalog.pg_namespace ON pg_catalog.pg_namespace.oid = pg_catalog.pg_class.relnamespace 
+WHERE pg_catalog.pg_class.relname = $1::VARCHAR AND pg_catalog.pg_class.relkind = ANY (ARRAY[$2::VARCHAR, $3::VARCHAR, $4::VARCHAR, $5::VARCHAR, $6::VARCHAR]) AND pg_catalog.pg_table_is_visible(pg_catalog.pg_class.oid) AND pg_catalog.pg_namespace.nspname != $7::VARCHAR
+2024-11-16 12:22:27,201 - sqlalchemy.engine.Engine - _execute_context - INFO - [cached since 0.003969s ago] ('myproducts', 'r', 'p', 'f', 'v', 'm', 'pg_catalog')
+2024-11-16 12:22:27,202 - sqlalchemy.engine.Engine - _connection_commit_impl - INFO - COMMIT
+2024-11-16 12:22:27,642 - core.handlers.handler - start_bot - INFO - Бот запущен!
+2024-11-16 12:22:27,642 - aiogram.dispatcher - start_polling - INFO - Start polling
+2024-11-16 12:22:27,718 - aiogram.dispatcher - _polling - INFO - Run polling for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-16 12:22:29,510 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-16 12:22:29,519 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT users.tg_id, users.referal_code, users.referred_by 
+FROM users 
+WHERE users.tg_id = $1::INTEGER
+2024-11-16 12:22:29,519 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00049s] (859676040,)
+2024-11-16 12:22:29,520 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-16 12:22:29,715 - aiogram.event - feed_update - INFO - Update id=874833705 is handled. Duration 206 ms by bot id=7942268445
+2024-11-16 12:22:30,840 - sqlalchemy.engine.Engine - _connection_begin_impl - INFO - BEGIN (implicit)
+2024-11-16 12:22:30,841 - sqlalchemy.engine.Engine - _execute_context - INFO - SELECT balances.user_id, balances.quantity 
+FROM balances 
+WHERE balances.user_id = $1::INTEGER
+2024-11-16 12:22:30,841 - sqlalchemy.engine.Engine - _execute_context - INFO - [generated in 0.00010s] (859676040,)
+2024-11-16 12:22:30,843 - sqlalchemy.engine.Engine - _connection_rollback_impl - INFO - ROLLBACK
+2024-11-16 12:22:30,923 - aiogram.event - feed_update - INFO - Update id=874833706 is handled. Duration 83 ms by bot id=7942268445
+2024-11-16 12:26:20,277 - aiogram.dispatcher - _signal_stop_polling - WARNING - Received SIGINT signal
+2024-11-16 12:26:20,277 - aiogram.dispatcher - _polling - INFO - Polling stopped for bot @ShopTraningBot id=7942268445 - 'ShopBotTraning'
+2024-11-16 12:26:20,277 - aiogram.dispatcher - start_polling - INFO - Polling stopped
+2024-11-16 12:26:20,513 - core.handlers.handler - stop_bot - INFO - Бот остановлен!
