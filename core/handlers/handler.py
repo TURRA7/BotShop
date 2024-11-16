@@ -2,12 +2,12 @@
 import os
 import logging
 from decimal import Decimal, InvalidOperation
-from aiogram import F
-from aiogram import Router, Bot
+from aiogram import Router, Bot, types, F
 from aiogram.types import Message
 from aiogram.filters import Command
 from aiogram.fsm.context import FSMContext
 from aiogram.types.callback_query import CallbackQuery
+from aiogram.utils.keyboard import InlineKeyboardBuilder
 
 from core.database.dataTools import (get_all_products, get_user, add_user,
                                      add_product, increasing_quantity_of_goods,
@@ -17,6 +17,7 @@ from core.database.dataTools import (get_all_products, get_user, add_user,
                                      item_un_cart, get_user_collection_tools,
                                      add_product_to_users_collection_tools,
                                      empty_the_basket)
+from core.payment.payment_tools import check_payment, create_payment
 from core.utils.commands import set_commands
 from core.contents.content import (bot_status, user_menu,
                                    admin_menu, fsm_product)
@@ -472,4 +473,43 @@ async def balance_payment(message: Message) -> None:
 @router.message(F.text == user_menu[12])
 async def card_payment(message: Message) -> None:
     """Оплата картой."""
-    await message.answer("Функция ещё не реализованна!")
+    user_id = message.chat.id
+    cart_products = await get_user_cart(user_id=user_id)
+    amount = 0
+    for item in cart_products:
+        amount += item.price
+
+    pyment_url, payment_id = await create_payment(amount, user_id,
+                                                  "Оплата корзины...")
+    builder = InlineKeyboardBuilder()
+    builder.add(types.InlineKeyboardButton(
+        text="Оплатить",
+        url=pyment_url
+    ))
+    builder.add(types.InlineKeyboardButton(
+        text="Проверить оплату",
+        callback_data=f"check_{payment_id}"
+    ))
+
+    await message.answer("Счёт сформирован...",
+                         reply_markup=builder.as_markup())
+
+
+@router.callback_query(lambda c: 'check' in c.data)
+async def check_card_payment(callback: types.CallbackQuery) -> None:
+    user_id = callback.message.chat.id
+    result = await check_payment(callback.data.split("_")[-1])
+    if result:
+        cart_products = await get_user_cart(user_id=user_id)
+        for item in cart_products:
+            await add_product_to_users_collection_tools(
+                user_id=user_id,
+                product_name=item.product_name,
+                product_code=await generate_gift(),
+                photo_id=item.photo_id)
+        await empty_the_basket(user_id=user_id)
+        await callback.message.answer(
+            "Успешно, товары вы найдете в разделе 'МОИ ТОВАРЫ'.")
+    else:
+        await callback.message.answer(
+            "Оплата ещё не прошла или возникла ошибка!")

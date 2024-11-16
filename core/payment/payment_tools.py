@@ -1,6 +1,7 @@
-from sqlalchemy import DECIMAL
 from yookassa import Payment, Configuration
 import uuid
+
+import yookassa
 
 from config import YOOKASSA_ACCIUNT_ID, YOOKASSA_SECRET_KEY
 
@@ -9,18 +10,20 @@ Configuration.account_id = YOOKASSA_ACCIUNT_ID
 Configuration.secret_key = YOOKASSA_SECRET_KEY
 
 
-async def create_payment_request(amount: DECIMAL,
-                                 chat_id: int) -> tuple[str, str | None]:
+async def create_payment(amount: float,
+                         chat_id: int,
+                         description: str) -> tuple[str, str]:
     """
-    Создание заявки на оплату товаров из корзины.
+    Создание платежа в yookassa.
 
     Args:
-        amount: Сумма оплаты
+        amount: Сумма
         chat_id: ID пользователя
+        deescription: Описание/детали платежа
 
-    Retuenrs:
-        Возвращает ссылку на оплату товара (в ЮКАССЕ),
-        а так же ID пользвоателя
+    Returns:
+        Создаёт платёж в системе yookassa, возвращает
+        ссылку на транзакцию и ID платежа.
     """
     id_key = str(uuid.uuid4())
     payment = Payment.create({
@@ -33,12 +36,32 @@ async def create_payment_request(amount: DECIMAL,
         },
         "confirmation": {
             "type": "redirect",
-            "redirect_url": "https://t.me/ShopTraningBot"
+            "return_url": "http://t.me/test_pay_apiBot"
         },
         "capture": True,
         "metadata": {
             "chat_id": chat_id
         },
-        "description": "Описание товара..."
-        }, id_key)
+        "description": description
+    }, id_key)
+
     return payment.confirmation.confirmation_url, payment.id
+
+
+async def check_payment(payment_id) -> dict | bool:
+    """
+    Проверка платежа в yookassa.
+
+    Args:
+        payment_id: ID платежа в системе yookassa
+
+    Returns:
+        Проверяет статус платежа в системе yookassa,
+        возвращает метадату платежа если статус 'succeeded',
+        иначе False
+    """
+    payment = yookassa.Payment.find_one(payment_id=payment_id)
+    if payment.status == 'succeeded':
+        return payment.metadata
+    else:
+        return False
