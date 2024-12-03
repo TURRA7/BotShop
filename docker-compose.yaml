@@ -1,0 +1,39 @@
+version: '3.8'
+
+services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: ... # Название базы данных в PostgreSQL
+      POSTGRES_USER: ... # Имя пользователя в базе данных PostgreSQL
+      POSTGRES_PASSWORD: ... # Пароль к базе данных PostgreSQL
+    ports:
+      - "5433:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    networks:
+      - bot_shop
+
+  aiogram_bot:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+      TOKEN: ... # Токен полученный в ТГ у @BotFather
+      ADMIN_ID: ... # ID пользователя, полученное у @getmyid_bot
+      PG_USER: ... # Имя пользователя в базе данных PostgreSQL
+      PG_PASS: ... # Пароль к базе данных PostgreSQL
+      PG_HOST: db # Это хост базы данных к сервису db, его оставить без изменений!!!
+      PG_NAME: ... # Название базы данных в PostgreSQL
+      YOOKASSA_SECRET_KEY: ... # Секретный ключ yookassa
+      YOOKASSA_ACCIUNT_ID: ...
+    depends_on:
+      - db
+    networks:
+      - bot_shop
+
+volumes:
+  postgres_data:
+
+networks:
+  bot_shop:
