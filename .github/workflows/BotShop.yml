@@ -1,0 +1,35 @@
+name: BotShop
+on:
+    push:
+        branches:
+            - main
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout code
+              run: actions/checkout@v3
+            
+            - name: Install Docker Compose
+              run: |
+                sudo apt-get update
+                sudo apt-get install -y docker-compose
+            
+            - name: Set enviroment variables
+              run: |
+                echo "PG_USER=${{ secrets.POSTGRES_USER }}" >> $GITHUB_ENV
+                echo "PG_PASS=${{ secrets.POSTGRES_PASSWORD }}" >> $GITHUB_ENV
+                echo "PG_NAME=${{ secrets.POSTGRES_DB }}" >> $GITHUB_ENV
+                echo "TOKEN=${{ secrets.TOKEN_BOT }}" >> $GITHUB_ENV
+                echo "ADMIN_ID=${{ secrets.ADMIN_ID }}" >> $GITHUB_ENV
+                echo "YOOKASSA_SECRET_KEY=${{ secrets.YOOKASSA_SECRET_KEY }}" >> $GITHUB_ENV
+                echo "YOOKASSA_ACCIUNT_ID=${{ secrets.YOOKASSA_ACCIUNT_ID }}" >> $GITHUB_ENV
+            
+            - name: Set up Docker Compose and build + run
+              run: |
+                docker-compose up --build -d
+            
+            - name: Check containers logs
+              run: |
+                docker-compose logs
+
